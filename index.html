@@ -1,312 +1,1998 @@
+<!-- DELIVERY POLICIES -->
+
+<section class="policy-strip">
+    <h2>Ordering & Delivery</h2>
+    <div class="policy-items">
+        <span>Delivery within Sialkot city limits</span>
+        <span>Delivery charges: Rs. 250</span>
+        <span>Pickup available</span>
+        <span>Order confirmation through Instagram or WhatsApp</span>
+        <span>Payment details shared privately after confirmation</span>
+    </div>
+</section>
+
+<!-- ORDER FORM -->
+
+<section class="order-area" id="order">
+    <div class="order-panel">
+        <h2>Place Your Order</h2>
+        <p class="order-intro">
+            Select a product, enter your details and send your order enquiry.
+        </p>
+
+        <form id="orderForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input id="customerName" name="customerName"
+                           required autocomplete="name"
+                           placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input id="customerPhone" name="customerPhone"
+                           type="tel" required autocomplete="tel"
+                           placeholder="03XX XXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input id="city" name="city" required
+                           placeholder="Enter your city">
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Product Category *</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Choose a category</option>
+                        <option>Napkins</option>
+                        <option>Printed Suits</option>
+                        <option>Casual Suits</option>
+                        <option>Embroidered Suits</option>
+                        <option>Bin Saeed Suits</option>
+                        <option>Chiffon Dupattas</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label for="productDetails">Product / Design *</label>
+                    <input id="productDetails" name="productDetails"
+                           required placeholder="Select a product or type its name">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input id="quantity" name="quantity"
+                           type="number" min="1" step="1"
+                           value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryMethod">Delivery Method *</label>
+                    <select id="deliveryMethod" name="deliveryMethod" required>
+                        <option value="">Choose an option</option>
+                        <option>Delivery within Sialkot</option>
+                        <option>Pickup</option>
+                        <option>Outside Sialkot - Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address"
+                              placeholder="Enter your address if delivery is needed"></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" name="notes"
+                              placeholder="Ask about price, availability or fabric"></textarea>
+                </div>
+
+            </div>
+
+            <p class="order-note">
+                This form does not collect payment or bank details.
+                Product availability, price and delivery charges will be confirmed privately.
+            </p>
+
+            <div class="order-actions">
+                <button class="btn" type="button" id="instagramButton">
+                    Copy Order & Open Instagram
+                </button>
+
+                <button class="btn btn-outline" type="button" id="whatsappButton">
+                    Continue on WhatsApp
+                </button>
+            </div>
+
+            <p class="form-message" id="formMessage"
+               role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="outside-city">
+            <p>
+                <strong>Need help with your order?</strong><br>
+                Contact us for product details, prices and delivery options.
+            </p>
+
+            <div class="contact-links">
+                <a class="btn" href="https://ig.me/m/m.yousafcloth"
+                   target="_blank" rel="noopener">
+                    Instagram Message
+                </a>
+
+                <a class="btn btn-outline"
+                   href="https://www.instagram.com/m.yousafcloth/"
+                   target="_blank" rel="noopener">
+                    Visit Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+    <h2>Connect With Us</h2>
+    <p>For product details, availability and order enquiries, contact us.</p>
+
+    <div class="contact-links">
+        <a class="btn" href="https://www.instagram.com/m.yousafcloth/"
+           target="_blank" rel="noopener">
+            Instagram
+        </a>
+
+        <a class="btn btn-outline" href="https://ig.me/m/m.yousafcloth"
+           target="_blank" rel="noopener">
+            Send a Message
+        </a>
+
+        <a class="btn btn-outline" href="https://www.tiktok.com/@m.yousafcloth"
+           target="_blank" rel="noopener">
+            TikTok
+        </a>
+    </div>
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#order">How to Order</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <p>©️ <span id="year"></span> M. Yousaf Cloth House. All rights reserved.</p>
+</footer>
+
+<!-- Floating logo -->
+
+<a class="corner-logo" href="#home" aria-label="Back to top">
+    <img src="logo.png" alt="M. Yousaf Cloth House">
+</a>
+
+<!-- FULL-SCREEN IMAGE VIEWER -->
+
+<div class="image-viewer" id="imageViewer"
+     role="dialog" aria-modal="true"
+     aria-label="Product image viewer">
+
+    <button class="viewer-close" type="button"
+            onclick="closeViewer()" aria-label="Close image">✕</button>
+
+    <button class="viewer-prev" type="button"
+            onclick="changeImage(-1)" aria-label="Previous image">‹</button>
+
+    <div class="viewer-content">
+        <img id="viewerImage" src="" alt="Expanded product image">
+    </div>
+
+    <button class="viewer-next" type="button"
+            onclick="changeImage(1)" aria-label="Next image">›</button>
+
+    <p class="viewer-caption" id="viewerCaption"></p>
+</div>
+
+<script>
+
+/* =========================================================
+   STORE SETTINGS
+   ========================================================= */
+
+const WHATSAPP_NUMBER = "923256275476";
+
+const INSTAGRAM_DM = "https://ig.me/m/m.yousafcloth";
+
+const BIN_SAEED_PRICE = 2499;
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+
+/* =========================================================
+   BIN SAEED SOLD-OUT SETTINGS
+
+   Change false to true when a design is sold out.
+   Example: 5: true means Bin Saeed Dress 5 is sold out.
+
+   All designs are available by default.
+   ========================================================= */
+
+const soldOut = {
+    1: false,
+    2: false,
+    3: false,
+    4: false,
+    5: false,
+    6: false,
+    7: false,
+    8: false,
+    9: false,
+    10: false,
+    11: false,
+    12: false,
+    13: false,
+    14: false,
+    15: false,
+    16: false,
+    17: false,
+    18: false,
+    19: false,
+    20: false,
+    21: false,
+    22: false,
+    23: false,
+    24: false,
+    25: false,
+    26: false,
+    27: false,
+    28: false,
+    29: false,
+    30: false,
+    31: false,
+    32: false,
+    33: false,
+    34: false,
+    35: false,
+    36: false,
+    37: false,
+    38: false,
+    39: false,
+    40: false,
+    41: false,
+    42: false,
+    43: false,
+    44: false,
+    45: false,
+    46: false,
+    47: false,
+    48: false,
+    49: false,
+    50: false,
+    51: false,
+    52: false,
+    53: false,
+    54: false,
+    55: false,
+    56: false,
+    57: false,
+    58: false,
+    59: false,
+    60: false,
+    61: false,
+    62: false,
+    63: false,
+    64: false,
+    65: false,
+    66: false,
+    67: false,
+    68: false,
+    69: false,
+    70: false,
+    71: false,
+    72: false,
+    73: false,
+    74: false,
+    75: false,
+    76: false,
+    77: false,
+    78: false,
+    79: false,
+    80: false,
+    81: false,
+    82: false,
+    83: false,
+    84: false,
+    85: false,
+    86: false,
+    87: false,
+    88: false,
+    89: false,
+    90: false,
+    91: false,
+    92: false,
+    93: false,
+    94: false,
+    95: false,
+    96: false,
+    97: false,
+    98: false,
+    99: false,
+    100: false,
+    101: false,
+    102: false,
+    103: false,
+    104: false,
+    105: false,
+    106: false,
+    107: false,
+    108: false,
+    109: false,
+    110: false,
+    111: false,
+    112: false,
+    113: false,
+    114: false,
+    115: false,
+    116: false,
+    117: false,
+    118: false,
+    119: false,
+    120: false
+};
+
+
+/* =========================================================
+   GENERATE ALL 120 BIN SAEED DESIGNS
+   ========================================================= */
+
+const binSaeedContainer =
+    document.getElementById("binSaeedProducts");
+
+const binSaeedFragment = document.createDocumentFragment();
+
+for (let i = 1; i <= 120; i++) {
+
+    const isSoldOut = soldOut[i] === true;
+
+    const card = document.createElement("article");
+    card.className = "bin-dress product-card";
+
+    if (isSoldOut) {
+        card.classList.add("is-sold-out");
+    }
+
+    /* Product image */
+
+    const pictureButton = document.createElement("button");
+    pictureButton.type = "button";
+    pictureButton.className = "product-picture";
+
+    pictureButton.setAttribute(
+        "aria-label",
+        "View Bin Saeed Dress " + i
+    );
+
+    const img = document.createElement("img");
+
+    img.src = "bin-saeed-suit" + i + ".jpg";
+    img.alt = "Bin Saeed Dress " + i;
+    img.loading = i <= 2 ? "eager" : "lazy";
+
+    img.onerror = function() {
+        this.alt = "Please add image file: bin-saeed-suit" + i + ".jpg";
+    };
+
+    pictureButton.appendChild(img);
+
+    pictureButton.addEventListener("click", function() {
+        openViewer(pictureButton);
+    });
+
+    /* Product details */
+
+    const info = document.createElement("div");
+    info.className = "product-info";
+
+    const title = document.createElement("h4");
+    title.textContent = "Bin Saeed Dress " + i;
+
+    const description = document.createElement("p");
+    description.textContent = isSoldOut
+        ? "This design is currently sold out."
+        : "Elegant Bin Saeed design. Contact us for availability.";
+
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent = "Price: Rs. " +
+        BIN_SAEED_PRICE.toLocaleString("en-PK");
+
+    info.appendChild(title);
+    info.appendChild(description);
+    info.appendChild(price);
+
+    /* Sold-out label and disabled order button */
+
+    if (isSoldOut) {
+
+        const badge = document.createElement("p");
+        badge.className = "sold-out-badge";
+        badge.textContent = "SOLD OUT";
+
+        info.appendChild(badge);
+
+    }
+
+    const orderButton = document.createElement("button");
+    orderButton.type = "button";
+    orderButton.className = "btn order-product";
+
+    if (isSoldOut) {
+
+        orderButton.textContent = "Sold Out";
+        orderButton.disabled = true;
+
+    } else {
+
+        orderButton.textContent = "Select This Product";
+
+        orderButton.addEventListener("click", function() {
+            chooseProduct(
+                "Bin Saeed Suits",
+                "Bin Saeed Dress " + i,
+                BIN_SAEED_PRICE
+            );
+        });
+
+    }
+
+    info.appendChild(orderButton);
+
+    card.appendChild(pictureButton);
+    card.appendChild(info);
+
+    binSaeedFragment.appendChild(card);
+}
+
+binSaeedContainer.appendChild(binSaeedFragment);
+
+
+/* =========================================================
+   SELECT A PRODUCT AND FILL THE ORDER FORM
+   ========================================================= */
+
+function chooseProduct(categoryName, productName, price) {
+
+    document.getElementById("productCategory").value =
+        categoryName;
+
+    document.getElementById("productDetails").value =
+        productName;
+
+    if (price) {
+        document.getElementById("notes").value =
+            "Listed price: Rs. " +
+            price.toLocaleString("en-PK") +
+            ". Please confirm availability.";
+    }
+
+    document.getElementById("order").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    setTimeout(function() {
+        document.getElementById("customerName").focus({
+            preventScroll: true
+        });
+    }, 500);
+}
+
+
+/* =========================================================
+   ORDER FORM MESSAGES
+   ========================================================= */
+
+function showMessage(message) {
+    document.getElementById("formMessage").textContent = message;
+}
+
+
+/* =========================================================
+   CREATE THE ORDER MESSAGE
+   ========================================================= */
+
+function createOrderMessage() {
+
+    const form = document.getElementById("orderForm");
+
+    if (!form.reportValidity()) {
+        return null;
+    }
+
+    const data = new FormData(form);
+
+    const city = String(data.get("city") || "").trim();
+    const method = String(data.get("deliveryMethod") || "");
+    const address = String(data.get("address") || "").trim();
+
+    if (method === "Delivery within Sialkot" &&
+        !/sialkot/i.test(city)) {
+
+        showMessage(
+            "For delivery within Sialkot, enter Sialkot as your city. For other locations, select Outside Sialkot - Enquiry."
+        );
+
+        return null;
+    }
+
+    if (method === "Delivery within Sialkot" && !address) {
+
+        showMessage("Please enter your complete delivery address.");
+
+        document.getElementById("address").focus();
+
+        return null;
+    }
+
+    return [
+        "M. Yousaf Cloth House - Order Enquiry",
+        "",
+        "Name: " + data.get("customerName"),
+        "Phone: " + data.get("customerPhone"),
+        "City: " + city,
+        "Category: " + data.get("productCategory"),
+        "Product / Design: " + data.get("productDetails"),
+        "Quantity: " + data.get("quantity"),
+        "Delivery Method: " + method,
+        "Address: " + (address || "Not provided"),
+        "Additional Notes: " + (data.get("notes") || "None"),
+        "",
+        "Please confirm product availability, price and delivery charges.",
+        "I will wait for confirmation before making payment."
+    ].join("\n");
+}
+
+
+/* =========================================================
+   COPY ORDER AND OPEN INSTAGRAM
+   ========================================================= */
+
+document.getElementById("instagramButton").addEventListener(
+    "click",
+    async function() {
+
+        const message = createOrderMessage();
+
+        if (!message) {
+            return;
+        }
+
+        try {
+
+            if (navigator.clipboard && window.isSecureContext) {
+
+                await navigator.clipboard.writeText(message);
+
+            } else {
+
+                const temporary = document.createElement("textarea");
+
+                temporary.value = message;
+                temporary.setAttribute("readonly", "");
+                temporary.style.position = "fixed";
+                temporary.style.opacity = "0";
+
+                document.body.appendChild(temporary);
+
+                temporary.select();
+
+                const copied = document.execCommand("copy");
+
+                temporary.remove();
+
+                if (!copied) {
+                    throw new Error("Copy failed");
+                }
+            }
+
+            showMessage(
+                "Order message copied! Instagram will open. Paste the message into the chat and tap Send."
+            );
+
+        } catch (error) {
+
+            showMessage(
+                "Copying was blocked. Your order message is displayed below so you can copy it manually."
+            );
+
+            let output = document.getElementById("manualMessage");
+
+            if (!output) {
+
+                output = document.createElement("textarea");
+                output.id = "manualMessage";
+                output.readOnly = true;
+                output.setAttribute("aria-label", "Your order message");
+                output.style.width = "100%";
+                output.style.minHeight = "220px";
+                output.style.marginTop = "12px";
+                output.style.padding = "12px";
+
+                document.getElementById("formMessage").after(output);
+            }
+
+            output.value = message;
+            output.focus();
+            output.select();
+        }
+
+        window.open(INSTAGRAM_DM, "_blank");
+    }
+);
+
+
+/* =========================================================
+   WHATSAPP ORDERING
+   ========================================================= */
+
+document.getElementById("whatsappButton").addEventListener(
+    "click",
+    function() {
+
+        const message = createOrderMessage();
+
+        if (!message) {
+            return;
+        }
+
+        const whatsappURL =
+            "https://wa.me/" +
+            WHATSAPP_NUMBER +
+            "?text=" +
+            encodeURIComponent(message);
+
+        window.open(
+            whatsappURL,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+        showMessage(
+            "WhatsApp is opening with your prepared order. Review the message and tap Send."
+        );
+    }
+);
+
+
+/* =========================================================
+   FULL-SCREEN IMAGE VIEWER
+   ========================================================= */
+
+let currentImageIndex = 0;
+let productPictures = [];
+
+function refreshProductPictures() {
+
+    productPictures = Array.from(
+        document.querySelectorAll(".product-picture")
+    );
+
+}
+
+function openViewer(pictureButton) {
+
+    refreshProductPictures();
+
+    currentImageIndex = productPictures.indexOf(pictureButton);
+
+    if (currentImageIndex < 0) {
+        return;
+    }
+
+    showCurrentImage();
+
+    document.getElementById("imageViewer").classList.add("open");
+
+    document.body.style.overflow = "hidden";
+}
+
+function showCurrentImage() {
+
+    if (!productPictures.length) {
+        return;
+    }
+
+    currentImageIndex =
+        (currentImageIndex + productPictures.length) %
+        productPictures.length;
+
+    const button = productPictures[currentImageIndex];
+    const image = button.querySelector("img");
+
+    document.getElementById("viewerImage").src = image.src;
+
+    document.getElementById("viewerImage").alt = image.alt;
+
+    document.getElementById("viewerCaption").textContent =
+        image.alt + " • " +
+        (currentImageIndex + 1) + " of " +
+        productPictures.length;
+}
+
+function changeImage(direction) {
+
+    currentImageIndex += direction;
+
+    showCurrentImage();
+}
+
+function closeViewer() {
+
+    document.getElementById("imageViewer").classList.remove("open");
+
+    document.body.style.overflow = "";
+}
+
+document.getElementById("imageViewer").addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === this) {
+            closeViewer();
+        }
+
+    }
+);
+
+document.addEventListener("keydown", function(event) {
+
+    const viewer = document.getElementById("imageViewer");
+
+    if (!viewer.classList.contains("open")) {
+        return;
+    }
+
+    if (event.key === "Escape") {
+        closeViewer();
+    }
+
+    if (event.key === "ArrowLeft") {
+        changeImage(-1);
+    }
+
+    if (event.key === "ArrowRight") {
+        changeImage(1);
+    }
+
+});
+
+
+/* =========================================================
+   MOBILE SWIPE SUPPORT FOR THE IMAGE VIEWER
+   ========================================================= */
+
+let touchStartX = 0;
+
+document.getElementById("imageViewer").addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX = event.changedTouches[0].screenX;
+
+    },
+    { passive: true }
+);
+
+document.getElementById("imageViewer").addEventListener(
+    "touchend",
+    function(event) {
+
+        const touchEndX = event.changedTouches[0].screenX;
+
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 60) {
+            return;
+        }
+
+        changeImage(distance < 0 ? 1 : -1);
+
+    },
+    { passive: true }
+);
+
+</script>
+
+</body>
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>M. Yousaf Cloth House</title>
-<meta name="description" content="Explore suits, dupattas and everyday essentials at M. Yousaf Cloth House.">
+<meta name="description" content="Explore Bin Saeed suits, printed suits, casual suits, embroidered suits, napkins and dupattas at M. Yousaf Cloth House.">
 <meta name="theme-color" content="#171613">
+
 <style>
-:root{--black:#171613;--beige:#e8dcc8;--cream:#f8f4ec;--white:#fffdf9;--gold:#b79a6b;--text:#292720;--muted:#746e63;--border:#ded3c1}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:125px}
-body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-button{cursor:pointer}
-img{display:block;max-width:100%}
-.announcement{background:var(--black);color:var(--beige);text-align:center;padding:9px 12px;font-size:12px;letter-spacing:1.3px;font-weight:bold}
-header{background:rgba(248,244,236,.98);border-bottom:1px solid var(--border);position:sticky;top:0;z-index:100}
-.navbar{max-width:1200px;min-height:85px;padding:12px 22px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:18px}
-.brand{display:flex;align-items:center;gap:12px}
-.brand img{width:65px;height:65px;object-fit:contain}
-.brand-text h1{font-family:Georgia,serif;font-size:clamp(15px,2.4vw,23px);line-height:1.3;color:var(--black)}
-.brand-text p{color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:4px}
-.nav-links{display:flex;align-items:center;flex-wrap:wrap;gap:16px}
-.nav-links a{font-size:13px;font-weight:bold}
-.nav-links a:hover{color:#92744b}
-.section{max-width:1200px;padding:42px 22px;margin:auto}
-.section-heading{text-align:center;margin-bottom:28px}
-.eyebrow{color:#92744b;letter-spacing:3px;text-transform:uppercase;font-size:11px;font-weight:bold;margin-bottom:7px}
-.section-heading h2{font-family:Georgia,serif;font-size:clamp(27px,4vw,38px);font-weight:normal;color:var(--black)}
-.section-heading p:last-child{color:var(--muted);font-size:14px;margin-top:7px}
-.hero{max-width:1200px;margin:auto;padding:55px 22px 48px;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px}
-.hero h2{font-family:Georgia,serif;font-size:clamp(34px,5vw,57px);font-weight:normal;line-height:1.15;margin-bottom:18px;color:var(--black)}
-.hero-copy>p:not(.eyebrow){color:var(--muted);max-width:510px;margin-bottom:24px}
-.hero-logo{min-height:270px;display:flex;align-items:center;justify-content:center;padding:25px;border:1px solid var(--border);background:rgba(255,253,249,.8)}
-.hero-logo img{max-width:330px;max-height:290px;width:100%;object-fit:contain}
-.btn{display:inline-flex;justify-content:center;align-items:center;padding:12px 20px;border:1px solid var(--black);background:var(--black);color:white;font-weight:bold;font-size:13px;text-align:center;transition:.2s}
-.btn:hover{background:#38352e}
-.btn-outline{background:transparent;color:var(--black)}
-.btn-outline:hover{background:var(--beige)}
-.btn:disabled,.btn[disabled]{opacity:.55;cursor:not-allowed;background:#77736b;border-color:#77736b;color:#fff}
-.hero-buttons{display:flex;flex-wrap:wrap;gap:12px}
-.category-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.category-card{display:block;padding:22px 15px;text-align:center;background:rgba(255,253,249,.94);border:1px solid var(--border);transition:.2s}
-.category-card:hover{background:var(--black);color:var(--beige)}
-.category-card h3{font-family:Georgia,serif;font-size:19px;font-weight:normal}
-.category-card p{font-size:12px;margin-top:5px;color:var(--muted)}
-.category-card:hover p{color:var(--beige)}
-.product-section{padding-top:38px;padding-bottom:40px;border-top:1px solid rgba(183,154,107,.3)}
-.product-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
-.product-card{min-width:0;background:rgba(255,253,249,.96);border:1px solid var(--border);overflow:hidden}
-.product-picture{width:100%;height:310px;border:0;padding:0;background:#eee6d9;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.product-picture img{width:100%;height:100%;object-fit:contain;cursor:zoom-in;transition:transform .25s}
-.product-picture:hover img{transform:scale(1.02)}
-.product-info{padding:16px}
-.product-info h4{font-family:Georgia,serif;font-size:19px;color:var(--black);margin-bottom:5px}
-.product-info p{color:var(--muted);font-size:13px}
-.product-price{font-weight:bold;color:#92744b!important;margin:8px 0 13px}
-.order-product{width:100%}
-.bin-saeed-section{background:rgba(232,220,200,.2)}
-.bin-saeed-list{display:flex;flex-direction:column;gap:24px;max-width:850px;margin:auto}
-.bin-dress{background:var(--white);border:1px solid var(--border);overflow:hidden}
-.bin-dress .product-picture{width:100%;height:auto;min-height:300px;max-height:850px;aspect-ratio:4/5;background:#eee6d9}
-.bin-dress .product-picture img{object-fit:contain;width:100%;height:100%}
-.bin-dress .product-info{padding:20px}
-.bin-dress .product-info h4{font-size:22px}
-.bin-dress .order-product{max-width:300px}
-.sold-out-badge{display:inline-block;margin:5px 0 12px;padding:5px 11px;background:#8b2727;color:#fff!important;font-size:12px!important;font-weight:bold;letter-spacing:1.5px}
-.bin-dress.is-sold-out{border-color:#bda8a0}
-.bin-dress.is-sold-out .product-picture img{opacity:.78}
-.policy-strip{background:var(--black);color:var(--beige);padding:30px 20px;text-align:center}
-.policy-strip h2{font-family:Georgia,serif;font-weight:normal;font-size:27px;margin-bottom:12px}
-.policy-items{max-width:900px;margin:auto;display:flex;justify-content:center;flex-wrap:wrap;gap:12px 28px;font-size:13px}
-.order-area{max-width:850px;margin:auto;padding:45px 22px 55px}
-.order-panel{background:rgba(255,253,249,.97);border:1px solid var(--border);padding:clamp(18px,4vw,35px)}
-.order-panel h2{font-family:Georgia,serif;font-size:31px;font-weight:normal;text-align:center;margin-bottom:8px}
-.order-intro{text-align:center;color:var(--muted);font-size:14px;margin-bottom:25px}
-.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
-.form-group{display:flex;flex-direction:column;gap:6px}
-.form-group.full{grid-column:1/-1}
-.form-group label{font-size:13px;font-weight:bold}
-.form-group input,.form-group select,.form-group textarea{width:100%;padding:12px;border:1px solid var(--border);background:white;color:var(--text);border-radius:0}
-.form-group textarea{resize:vertical;min-height:95px}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
-.order-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
-.order-actions .btn{width:100%;min-height:48px}
-.form-message{margin-top:15px;padding:12px;background:#f1e8d9;border:1px solid var(--border);font-size:13px;color:#51412c;overflow-wrap:anywhere}
-.form-message:empty{display:none}
-.order-note{color:var(--muted);font-size:12px;margin-top:14px;text-align:center}
-.outside-city{margin-top:22px;padding:18px;border:1px solid var(--border);text-align:center;background:rgba(232,220,200,.5)}
-.outside-city p{font-size:14px;margin-bottom:12px}
-.contact-links{display:flex;justify-content:center;flex-wrap:wrap;gap:10px}
-.contact-section{background:#eee5d7;text-align:center;padding:38px 20px}
-.contact-section h2{font-family:Georgia,serif;font-size:29px;font-weight:normal;margin-bottom:8px}
-.contact-section p{font-size:14px;color:var(--muted);margin-bottom:18px}
-footer{background:var(--black);color:var(--beige);text-align:center;padding:25px 18px 85px;font-size:12px}
-.footer-links{display:flex;justify-content:center;flex-wrap:wrap;gap:17px;margin-bottom:15px}
-.corner-logo{position:fixed;bottom:14px;right:14px;z-index:90;width:55px;height:55px;padding:5px;background:rgba(255,253,249,.96);border:1px solid var(--border);box-shadow:0 2px 10px rgba(0,0,0,.12)}
-.corner-logo img{width:100%;height:100%;object-fit:contain}
-.image-viewer{display:none;position:fixed;inset:0;z-index:300;background:rgba(0,0,0,.94);align-items:center;justify-content:center;padding:55px 12px}
-.image-viewer.open{display:flex}
-.viewer-content{width:100%;height:100%;display:flex;align-items:center;justify-content:center}
-.image-viewer img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
-.viewer-close,.viewer-prev,.viewer-next{position:absolute;z-index:2;color:white;background:rgba(30,30,30,.85);border:1px solid rgba(255,255,255,.5);padding:9px 15px;font-size:24px}
-.viewer-close{top:12px;right:12px}
-.viewer-prev{left:10px;top:50%}
-.viewer-next{right:10px;top:50%}
-.viewer-caption{position:absolute;bottom:12px;left:60px;right:60px;color:white;text-align:center;font-size:13px}
-@media(max-width:760px){.navbar{flex-wrap:wrap;justify-content:center;padding:10px 14px;gap:12px}.brand{width:100%;justify-content:flex-start}.brand img{width:56px;height:56px}.nav-links{justify-content:center;gap:10px 15px}.hero{grid-template-columns:1fr;gap:25px;padding-top:35px}.hero-logo{min-height:200px}.hero-logo img{max-height:220px}.product-picture{height:235px}.bin-dress .product-picture{min-height:260px;max-height:700px;aspect-ratio:4/5}}
-@media(max-width:430px){.product-grid{gap:10px}.product-picture{height:180px}.product-info{padding:11px}.product-info h4{font-size:16px}.product-info p{font-size:12px}.category-card{padding:17px 8px}.category-card h3{font-size:16px}.form-grid{grid-template-columns:1fr}.form-group.full{grid-column:auto}.order-actions{grid-template-columns:1fr}.bin-dress .product-info{padding:15px}.bin-dress .product-info h4{font-size:20px}.bin-dress .product-picture{min-height:220px}.corner-logo{width:46px;height:46px}}
+:root {
+    --black: #171613;
+    --black-soft: #24221e;
+    --beige: #e8dcc8;
+    --cream: #f8f4ec;
+    --white: #fffdf9;
+    --gold: #b79a6b;
+    --text: #292720;
+    --muted: #746e63;
+    --border: #ded3c1;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 125px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("logo.png");
+    background-position: center;
+    background-repeat: repeat;
+    background-size: 260px auto;
+    opacity: .035;
+    pointer-events: none;
+    z-index: -1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Announcement: continuous right-to-left scrolling */
+
+.announcement {
+    background: var(--black);
+    color: var(--beige);
+    padding: 9px 0;
+    font-size: 12px;
+    letter-spacing: 1.3px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.announcement-track {
+    display: flex;
+    width: max-content;
+    animation: announcement-scroll 22s linear infinite;
+}
+
+.announcement-track span {
+    display: block;
+    padding: 0 35px;
+}
+
+.announcement:hover .announcement-track {
+    animation-play-state: paused;
+}
+
+@keyframes announcement-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .announcement-track {
+        animation: none;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+/* Navigation */
+
+header {
+    background: rgba(248,244,236,.98);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    max-width: 1200px;
+    min-height: 85px;
+    padding: 12px 22px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand img {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.brand-text h1 {
+    font-family: Georgia, serif;
+    font-size: clamp(15px, 2.4vw, 23px);
+    line-height: 1.3;
+    color: var(--black);
+}
+
+.brand-text p {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #92744b;
+}
+
+/* General sections */
+
+.section {
+    max-width: 1200px;
+    padding: 42px 22px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.eyebrow {
+    color: #92744b;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: normal;
+    color: var(--black);
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* Hero */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 22px 48px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(34px, 5vw, 57px);
+    font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--black);
+}
+
+.hero-copy > p:not(.eyebrow) {
+    color: var(--muted);
+    max-width: 510px;
+    margin-bottom: 24px;
+}
+
+.hero-logo {
+    min-height: 270px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border: 1px solid var(--border);
+    background: rgba(255,253,249,.8);
+}
+
+.hero-logo img {
+    max-width: 330px;
+    max-height: 290px;
+    width: 100%;
+    object-fit: contain;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border: 1px solid var(--black);
+    background: var(--black);
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    text-align: center;
+    transition: .2s;
+}
+
+.btn:hover {
+    background: #38352e;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--black);
+}
+
+.btn-outline:hover {
+    background: var(--beige);
+}
+
+.btn:disabled {
+    background: #8b2727;
+    border-color: #8b2727;
+    color: white;
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Clickable category cards */
+
+.category-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.category-card {
+    display: block;
+    padding: 22px 15px;
+    text-align: center;
+    background: rgba(255,253,249,.94);
+    border: 1px solid var(--border);
+    transition: .2s;
+}
+
+.category-card:hover {
+    background: var(--black);
+    color: var(--beige);
+}
+
+.category-card h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.category-card p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+.category-card:hover p {
+    color: var(--beige);
+}
+
+/* Standard product sections */
+
+.product-section {
+    padding-top: 38px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgba(183,154,107,.3);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    min-width: 0;
+    background: rgba(255,253,249,.96);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.product-picture {
+    width: 100%;
+    height: 310px;
+    border: 0;
+    padding: 0;
+    background: #eee6d9;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform .25s;
+}
+
+.product-picture:hover img {
+    transform: scale(1.02);
+}
+
+.product-info {
+    padding: 16px;
+}
+
+.product-info h4 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    color: var(--black);
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.product-price {
+    font-weight: bold;
+    color: #92744b !important;
+    margin: 8px 0 13px;
+}
+
+.order-product {
+    width: 100%;
+}
+
+/* Bin Saeed: one design per row */
+
+.bin-saeed-section {
+    background: rgba(232,220,200,.2);
+}
+
+.bin-saeed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.bin-dress {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.bin-dress .product-picture {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 850px;
+    aspect-ratio: 4 / 5;
+    background: #eee6d9;
+}
+
+.bin-dress .product-picture img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.bin-dress .product-info {
+    padding: 20px;
+}
+
+.bin-dress .product-info h4 {
+    font-size: 22px;
+}
+
+.bin-dress .order-product {
+    max-width: 300px;
+}
+
+.sold-out-badge {
+    display: inline-block;
+    background: #8b2727;
+    color: white !important;
+    font-size: 12px !important;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    padding: 5px 11px;
+    margin: 5px 0 12px;
+}
+
+.bin-dress.is-sold-out .product-picture img {
+    opacity: .78;
+}
+
+/* Ordering and delivery */
+
+.policy-strip {
+    background: var(--black);
+    color: var(--beige);
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.policy-strip h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    font-size: 27px;
+    margin-bottom: 12px;
+}
+
+.policy-items {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 28px;
+    font-size: 13px;
+}
+
+/* Order form */
+
+.order-area {
+    max-width: 850px;
+    margin: auto;
+    padding: 45px 22px 55px;
+}
+
+.order-panel {
+    background: rgba(255,253,249,.97);
+    border: 1px solid var(--border);
+    padding: clamp(18px, 4vw, 35px);
+}
+
+.order-panel h2 {
+    font-family: Georgia, serif;
+    font-size: 31px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.order-intro {
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border);
+    background: white;
+    color: var(--text);
+    border-radius: 0;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 95px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 1px;
+}
+
+.order-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.order-actions .btn {
+    width: 100%;
+    min-height: 48px;
+}
+
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    background: #f1e8d9;
+    border: 1px solid var(--border);
+    font-size: 13px;
+    color: #51412c;
+    overflow-wrap: anywhere;
+}
+
+.form-message:empty {
+    display: none;
+}
+
+.order-note {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: center;
+}
+
+.outside-city {
+    margin-top: 22px;
+    padding: 18px;
+    border: 1px solid var(--border);
+    text-align: center;
+    background: rgba(232,220,200,.5);
+}
+
+.outside-city p {
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Contact and footer */
+
+.contact-section {
+    background: #eee5d7;
+    text-align: center;
+    padding: 38px 20px;
+}
+
+.contact-section h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+.contact-section p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+footer {
+    background: var(--black);
+    color: var(--beige);
+    text-align: center;
+    padding: 25px 18px 85px;
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 17px;
+    margin-bottom: 15px;
+}
+
+/* Floating logo */
+
+.corner-logo {
+    position: fixed;
+    bottom: 14px;
+    right: 14px;
+    z-index: 90;
+    width: 55px;
+    height: 55px;
+    padding: 5px;
+    background: rgba(255,253,249,.96);
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
+}
+
+.corner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Full-screen image viewer */
+
+.image-viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    background: rgba(0,0,0,.94);
+    align-items: center;
+    justify-content: center;
+    padding: 55px 12px;
+}
+
+.image-viewer.open {
+    display: flex;
+}
+
+.viewer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-viewer img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.viewer-close,
+.viewer-prev,
+.viewer-next {
+    position: absolute;
+    z-index: 2;
+    color: white;
+    background: rgba(30,30,30,.85);
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 9px 15px;
+    font-size: 24px;
+}
+
+.viewer-close {
+    top: 12px;
+    right: 12px;
+}
+
+.viewer-prev {
+    left: 10px;
+    top: 50%;
+}
+
+.viewer-next {
+    right: 10px;
+    top: 50%;
+}
+
+.viewer-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 60px;
+    right: 60px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 760px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px 14px;
+        gap: 12px;
+    }
+
+    .brand {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .brand img {
+        width: 56px;
+        height: 56px;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 10px 15px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-top: 35px;
+    }
+
+    .hero-logo {
+        min-height: 200px;
+    }
+
+    .hero-logo img {
+        max-height: 220px;
+    }
+
+    .product-picture {
+        height: 235px;
+    }
+
+    .bin-dress .product-picture {
+        min-height: 260px;
+        max-height: 700px;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+@media (max-width: 430px) {
+    .product-grid {
+        gap: 10px;
+    }
+
+    .product-picture {
+        height: 180px;
+    }
+
+    .product-info {
+        padding: 11px;
+    }
+
+    .product-info h4 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        font-size: 12px;
+    }
+
+    .category-card {
+        padding: 17px 8px;
+    }
+
+    .category-card h3 {
+        font-size: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .order-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .bin-dress .product-info {
+        padding: 15px;
+    }
+
+    .bin-dress .product-info h4 {
+        font-size: 20px;
+    }
+
+    .bin-dress .product-picture {
+        min-height: 220px;
+    }
+
+    .corner-logo {
+        width: 46px;
+        height: 46px;
+    }
+}
 </style>
 </head>
+
 <body>
-<div class="announcement">BIN SAEED DEALER • DELIVERY AVAILABLE IN SIALKOT</div>
-<header><nav class="navbar"><a href="#home" class="brand" aria-label="M. Yousaf Cloth House home"><img src="logo.jpg" alt="M. Yousaf Cloth House logo"><div class="brand-text"><h1>M. Yousaf Cloth House</h1><p>STYLE • QUALITY • ELEGANCE</p></div></a><div class="nav-links"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#order">How to Order</a><a href="#contact">Contact</a></div></nav></header>
+
+<div class="announcement" aria-label="Store announcement">
+    <div class="announcement-track">
+        <span>BIN SAEED DEALER • DELIVERY AVAILABLE IN SIALKOT • PICKUP AVAILABLE</span>
+        <span>BIN SAEED DEALER • DELIVERY AVAILABLE IN SIALKOT • PICKUP AVAILABLE</span>
+    </div>
+</div>
+
+<header>
+    <nav class="navbar">
+        <a href="#home" class="brand" aria-label="M. Yousaf Cloth House home">
+            <img src="logo.png" alt="M. Yousaf Cloth House logo">
+            <div class="brand-text">
+                <h1>M. Yousaf Cloth House</h1>
+                <p>STYLE • QUALITY • ELEGANCE</p>
+            </div>
+        </a>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#categories">Categories</a>
+            <a href="#order">How to Order</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
 <main>
-<section class="hero" id="home"><div class="hero-copy"><p class="eyebrow">Welcome to our collection</p><h2>Everyday Style, Timeless Elegance.</h2><p>Discover suits, dupattas and everyday essentials at M. Yousaf Cloth House. Browse our designs, select your favourite product and send us an order enquiry.</p><div class="hero-buttons"><a class="btn" href="#categories">Explore Collection</a><a class="btn btn-outline" href="#order">How to Order</a></div></div><div class="hero-logo"><img src="logo.jpg" alt="M. Yousaf Cloth House full logo"></div></section>
-<section class="section" id="categories"><div class="section-heading"><p class="eyebrow">Browse our collection</p><h2>Shop by Category</h2><p>Tap a category to explore its designs.</p></div><div class="category-links"><a class="category-card" href="#napkins"><h3>Napkins</h3><p>Explore collection →</p></a><a class="category-card" href="#printed-suits"><h3>Printed Suits</h3><p>Explore collection →</p></a><a class="category-card" href="#casual-suits"><h3>Casual Suits</h3><p>Explore collection →</p></a><a class="category-card" href="#embroidered-suits"><h3>Embroidered Suits</h3><p>Explore collection →</p></a><a class="category-card" href="#bin-saeed-suits"><h3>Bin Saeed Suits</h3><p>120 designs • Rs. 2,499 each →</p></a><a class="category-card" href="#chiffon-dupattas"><h3>Chiffon Dupattas</h3><p>Explore collection →</p></a></div></section>
-<div id="standardProducts"></div>
-<section class="section product-section bin-saeed-section" id="bin-saeed-suits"><div class="section-heading"><p class="eyebrow">Category 05 • 120 Designs</p><h2>Bin Saeed Suits</h2><p>Rs. 2,499 per suit. Tap any picture to view it full-screen.</p></div><div class="bin-saeed-list" id="binSaeedProducts"></div></section>
-<section class="policy-strip"><h2>Ordering &amp; Delivery</h2><div class="policy-items"><span>Delivery within Sialkot city limits</span><span>Delivery charges: Rs. 250</span><span>Pickup available</span><span>Order confirmation through Instagram or WhatsApp</span><span>Payment details shared privately after confirmation</span></div></section>
-<section class="order-area" id="order"><div class="order-panel"><h2>Place Your Order</h2><p class="order-intro">Select a product, enter your details and send your order enquiry.</p><form id="orderForm"><div class="form-grid"><div class="form-group"><label for="customerName">Full Name *</label><input id="customerName" name="customerName" required autocomplete="name" placeholder="Enter your name"></div><div class="form-group"><label for="customerPhone">Phone Number *</label><input id="customerPhone" name="customerPhone" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX"></div><div class="form-group"><label for="city">City *</label><input id="city" name="city" required placeholder="Enter your city"></div><div class="form-group"><label for="productCategory">Product Category *</label><select id="productCategory" name="productCategory" required><option value="">Choose a category</option><option>Napkins</option><option>Printed Suits</option><option>Casual Suits</option><option>Embroidered Suits</option><option>Bin Saeed Suits</option><option>Chiffon Dupattas</option></select></div><div class="form-group full"><label for="productDetails">Product / Design *</label><input id="productDetails" name="productDetails" required placeholder="Select a product or type its name"></div><div class="form-group"><label for="quantity">Quantity *</label><input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required></div><div class="form-group"><label for="deliveryMethod">Delivery Method *</label><select id="deliveryMethod" name="deliveryMethod" required><option value="">Choose an option</option><option>Delivery within Sialkot</option><option>Pickup</option><option>Outside Sialkot - Enquiry</option></select></div><div class="form-group full"><label for="address">Delivery Address</label><textarea id="address" name="address" placeholder="Enter your address if delivery is needed"></textarea></div><div class="form-group full"><label for="notes">Additional Notes (Optional)</label><textarea id="notes" name="notes" placeholder="Ask about price, availability or fabric"></textarea></div></div><p class="order-note">This form does not collect payment or bank details. Product availability, price and delivery charges will be confirmed privately.</p><div class="order-actions"><button class="btn" type="button" id="instagramButton">Copy Order &amp; Open Instagram</button><button class="btn btn-outline" type="button" id="whatsappButton">Continue on WhatsApp</button></div><p class="form-message" id="formMessage" role="status" aria-live="polite"></p></form><div class="outside-city"><p><strong>Need help with your order?</strong><br>Contact us for product details, prices and delivery options.</p><div class="contact-links"><a class="btn" href="https://ig.me/m/m.yousafcloth" target="_blank" rel="noopener">Instagram Message</a><a class="btn btn-outline" href="https://www.instagram.com/m.yousafcloth/" target="_blank" rel="noopener">Visit Instagram</a></div></div></div></section>
-<section class="contact-section" id="contact"><h2>Connect With Us</h2><p>For product details, availability and order enquiries, contact us.</p><div class="contact-links"><a class="btn" href="https://www.instagram.com/m.yousafcloth/" target="_blank" rel="noopener">Instagram</a><a class="btn btn-outline" href="https://ig.me/m/m.yousafcloth" target="_blank" rel="noopener">Send a Message</a><a class="btn btn-outline" href="https://www.tiktok.com/@m.yousafcloth" target="_blank" rel="noopener">TikTok</a></div></section>
-</main>
-<footer><div class="footer-links"><a href="#home">Home</a><a href="#categories">Categories</a><a href="#order">How to Order</a><a href="#contact">Contact</a></div><p>©️ <span id="year"></span> M. Yousaf Cloth House. All rights reserved.</p></footer>
-<a class="corner-logo" href="#home" aria-label="Back to top"><img src="logo.jpg" alt="M. Yousaf Cloth House"></a>
-<div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Product image viewer"><button class="viewer-close" type="button" onclick="closeViewer()" aria-label="Close image">✕</button><button class="viewer-prev" type="button" onclick="changeImage(-1)" aria-label="Previous image">‹</button><div class="viewer-content"><img id="viewerImage" src="" alt="Expanded product image"></div><button class="viewer-next" type="button" onclick="changeImage(1)" aria-label="Next image">›</button><p class="viewer-caption" id="viewerCaption"></p></div>
-<script>
-const WHATSAPP_NUMBER="923256275476";
-const INSTAGRAM_DM="https://ig.me/m/m.yousafcloth";
-document.getElementById("year").textContent=new Date().getFullYear();
 
-/* SOLD-OUT SETTINGS:
-   false = available
-   true = sold out
-   Example: 25: true means Bin Saeed Dress 25 is sold out.
-   To make it available again, change 25: true to 25: false.
-*/
-const soldOut = {
-  1:false, 2:false, 3:false, 4:false, 5:false, 6:false, 7:false, 8:false, 9:false, 10:false,
-  11:false, 12:false, 13:false, 14:false, 15:false, 16:false, 17:false, 18:false, 19:false, 20:false,
-  21:false, 22:false, 23:false, 24:false, 25:false, 26:false, 27:false, 28:false, 29:false, 30:false,
-  31:false, 32:false, 33:false, 34:false, 35:false, 36:false, 37:false, 38:false, 39:false, 40:false,
-  41:false, 42:false, 43:false, 44:false, 45:false, 46:false, 47:false, 48:false, 49:false, 50:false,
-  51:false, 52:false, 53:false, 54:false, 55:false, 56:false, 57:false, 58:false, 59:false, 60:false,
-  61:false, 62:false, 63:false, 64:false, 65:false, 66:false, 67:false, 68:false, 69:false, 70:false,
-  71:false, 72:false, 73:false, 74:false, 75:false, 76:false, 77:false, 78:false, 79:false, 80:false,
-  81:false, 82:false, 83:false, 84:false, 85:false, 86:false, 87:false, 88:false, 89:false, 90:false,
-  91:false, 92:false, 93:false, 94:false, 95:false, 96:false, 97:false, 98:false, 99:false, 100:false,
-  101:false, 102:false, 103:false, 104:false, 105:false, 106:false, 107:false, 108:false, 109:false, 110:false,
-  111:false, 112:false, 113:false, 114:false, 115:false, 116:false, 117:false, 118:false, 119:false, 120:false
-};
+<!-- HOME -->
 
-const categories=[
-{id:"napkins",name:"Napkins",prefix:"napkin",label:"Napkin Design",count:2},
-{id:"printed-suits",name:"Printed Suits",prefix:"printed-suit",label:"Printed Suit",count:2},
-{id:"casual-suits",name:"Casual Suits",prefix:"casual-suit",label:"Casual Suit",count:2},
-{id:"embroidered-suits",name:"Embroidered Suits",prefix:"embroidered-suit",label:"Embroidered Suit",count:2},
-{id:"chiffon-dupattas",name:"Chiffon Dupattas",prefix:"chiffon-dupatta",label:"Chiffon Dupatta",count:2}
-];
-const standard=document.getElementById("standardProducts");
-categories.forEach((cat,index)=>{
-  const section=document.createElement("section");
-  section.className="section product-section";
-  section.id=cat.id;
-  section.innerHTML='<div class="section-heading"><p class="eyebrow">Category '+(index+1)+'</p><h2>'+cat.name+'</h2></div><div class="product-grid"></div>';
-  const grid=section.querySelector(".product-grid");
-  for(let n=1;n<=cat.count;n++){
-    const label=cat.label+" "+n;
-    const card=document.createElement("article");
-    card.className="product-card";
-    card.innerHTML='<button class="product-picture" type="button" aria-label="View '+label+'"><img src="'+cat.prefix+n+'.jpg" alt="'+label+'" loading="lazy"></button><div class="product-info"><h4>'+label+'</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button">Select This Product</button></div>';
-    card.querySelector(".product-picture").addEventListener("click",()=>openViewer(card.querySelector(".product-picture")));
-    card.querySelector(".order-product").addEventListener("click",()=>chooseProduct(cat.name,label));
-    grid.appendChild(card);
-  }
-  standard.appendChild(section);
-});
+<section class="hero" id="home">
+    <div class="hero-copy">
+        <p class="eyebrow">Welcome to our collection</p>
+        <h2>Everyday Style, Timeless Elegance.</h2>
+        <p>
+            Discover suits, dupattas and everyday essentials at
+            M. Yousaf Cloth House. Browse our designs, select your
+            favourite product and send us an order enquiry.
+        </p>
+        <div class="hero-buttons">
+            <a class="btn" href="#categories">Explore Collection</a>
+            <a class="btn btn-outline" href="#order">How to Order</a>
+        </div>
+    </div>
 
-const bin=document.getElementById("binSaeedProducts");
-const frag=document.createDocumentFragment();
-for(let i=1;i<=120;i++){
-  const card=document.createElement("article");
-  card.className="bin-dress product-card";
-  const picture=document.createElement("button");
-  picture.type="button";
-  picture.className="product-picture";
-  picture.setAttribute("aria-label","View Bin Saeed Dress "+i+" full-screen");
-  const img=document.createElement("img");
-  img.src="bin-saeed-suit"+i+".jpg";
-  img.alt="Bin Saeed Dress "+i;
-  img.loading=i<=2?"eager":"lazy";
-  picture.appendChild(img);
-  picture.addEventListener("click",()=>openViewer(picture));
+    <div class="hero-logo">
+        <img src="logo.png" alt="M. Yousaf Cloth House full logo">
+    </div>
+</section>
 
-  const info=document.createElement("div");
-  info.className="product-info";
-  const title=document.createElement("h4");
-  title.textContent="Bin Saeed Dress "+i;
-  const description=document.createElement("p");
-  description.textContent="Bin Saeed suit design "+i+".";
-  const price=document.createElement("p");
-  price.className="product-price";
-  price.textContent="Price: Rs. 2,499";
-  const orderButton=document.createElement("button");
-  orderButton.className="btn order-product";
-  orderButton.type="button";
+<!-- CATEGORIES -->
 
-  if(soldOut[i]===true){
-    card.classList.add("is-sold-out");
-    const status=document.createElement("p");
-    status.className="sold-out-badge";
-    status.textContent="SOLD OUT";
-    orderButton.textContent="Sold Out";
-    orderButton.disabled=true;
-    orderButton.setAttribute("aria-label","Bin Saeed Dress "+i+" is sold out");
-    info.append(title,description,price,status,orderButton);
-  }else{
-    orderButton.textContent="Select This Product";
-    orderButton.addEventListener("click",()=>chooseProduct("Bin Saeed Suits","Bin Saeed Dress "+i));
-    info.append(title,description,price,orderButton);
-  }
-  card.append(picture,info);
-  frag.appendChild(card);
-}
-bin.appendChild(frag);
+<section class="section" id="categories">
+    <div class="section-heading">
+        <p class="eyebrow">Browse our collection</p>
+        <h2>Shop by Category</h2>
+        <p>Tap a category to explore its designs.</p>
+    </div>
 
-function chooseProduct(category,product){
-  document.getElementById("productCategory").value=category;
-  document.getElementById("productDetails").value=product;
-  document.getElementById("order").scrollIntoView({behavior:"smooth"});
-}
-function showMessage(msg){document.getElementById("formMessage").textContent=msg}
-function createOrderMessage(){
-  const form=document.getElementById("orderForm");
-  if(!form.reportValidity())return null;
-  const d=new FormData(form),city=String(d.get("city")||"").trim(),method=String(d.get("deliveryMethod")||""),address=String(d.get("address")||"").trim();
-  if(method==="Delivery within Sialkot"&&!/sialkot/i.test(city)){
-    showMessage("For delivery within Sialkot, enter Sialkot as your city. For other locations, select Outside Sialkot - Enquiry.");
-    return null;
-  }
-  if(method==="Delivery within Sialkot"&&!address){
-    showMessage("Please enter your complete delivery address.");
-    document.getElementById("address").focus();
-    return null;
-  }
-  return ["M. Yousaf Cloth House - Order Enquiry","","Name: "+d.get("customerName"),"Phone: "+d.get("customerPhone"),"City: "+city,"Category: "+d.get("productCategory"),"Product / Design: "+d.get("productDetails"),"Quantity: "+d.get("quantity"),"Delivery Method: "+method,"Address: "+(address||"Not provided"),"Additional Notes: "+(d.get("notes")||"None"),"","Please confirm product availability, price and delivery charges.","I will wait for confirmation before making payment."].join("\n");
-}
-document.getElementById("instagramButton").addEventListener("click",async()=>{
-  const message=createOrderMessage();
-  if(!message)return;
-  try{
-    await navigator.clipboard.writeText(message);
-    window.open(INSTAGRAM_DM,"_blank");
-    showMessage("Order message copied! Open Instagram, paste it into the message box and tap Send.");
-  }catch(e){
-    showMessage("Copying was blocked. Your order message is shown below so you can copy it manually.");
-    let out=document.getElementById("manualMessage");
-    if(!out){
-      out=document.createElement("textarea");
-      out.id="manualMessage";
-      out.readOnly=true;
-      out.style.cssText="width:100%;min-height:220px;margin-top:12px;padding:12px";
-      document.getElementById("formMessage").after(out);
-    }
-    out.value=message;out.focus();out.select();window.open(INSTAGRAM_DM,"_blank");
-  }
-});
-document.getElementById("whatsappButton").addEventListener("click",()=>{
-  const message=createOrderMessage();
-  if(!message)return;
-  window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank","noopener,noreferrer");
-  showMessage("Review your order in WhatsApp and tap Send.");
-});
+    <div class="category-links">
+        <a class="category-card" href="#napkins">
+            <h3>Napkins</h3>
+            <p>Explore collection →</p>
+        </a>
 
-let currentImageIndex=0,productPictures=[];
-function refreshProductPictures(){productPictures=Array.from(document.querySelectorAll(".product-picture"))}
-function openViewer(button){
-  refreshProductPictures();
-  currentImageIndex=productPictures.indexOf(button);
-  if(currentImageIndex<0)return;
-  showCurrentImage();
-  document.getElementById("imageViewer").classList.add("open");
-  document.body.style.overflow="hidden";
-}
-function showCurrentImage(){
-  if(!productPictures.length)return;
-  currentImageIndex=(currentImageIndex+productPictures.length)%productPictures.length;
-  const img=productPictures[currentImageIndex].querySelector("img");
-  document.getElementById("viewerImage").src=img.src;
-  document.getElementById("viewerImage").alt=img.alt;
-  document.getElementById("viewerCaption").textContent=img.alt+" • "+(currentImageIndex+1)+" of "+productPictures.length;
-}
-function changeImage(direction){currentImageIndex+=direction;showCurrentImage()}
-function closeViewer(){document.getElementById("imageViewer").classList.remove("open");document.body.style.overflow=""}
-document.getElementById("imageViewer").addEventListener("click",e=>{if(e.target===e.currentTarget)closeViewer()});
-document.addEventListener("keydown",e=>{
-  if(!document.getElementById("imageViewer").classList.contains("open"))return;
-  if(e.key==="Escape")closeViewer();
-  if(e.key==="ArrowLeft")changeImage(-1);
-  if(e.key==="ArrowRight")changeImage(1);
-});
-let touchStartX=0;
-document.getElementById("imageViewer").addEventListener("touchstart",e=>{touchStartX=e.changedTouches[0].screenX},{passive:true});
-document.getElementById("imageViewer").addEventListener("touchend",e=>{
-  const diff=e.changedTouches[0].screenX-touchStartX;
-  if(Math.abs(diff)>=60)changeImage(diff<0?1:-1);
-},{passive:true});
-</script>
-</body>
-</html>
+        <a class="category-card" href="#printed-suits">
+            <h3>Printed Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#casual-suits">
+            <h3>Casual Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#embroidered-suits">
+            <h3>Embroidered Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#bin-saeed-suits">
+            <h3>Bin Saeed Suits</h3>
+            <p>120 designs • Rs. 2,499 each →</p>
+        </a>
+
+        <a class="category-card" href="#chiffon-dupattas">
+            <h3>Chiffon Dupattas</h3>
+            <p>Explore collection →</p>
+        </a>
+    </div>
+</section>
+
+<!-- NAPKINS -->
+
+<section class="section product-section" id="napkins">
+    <div class="section-heading">
+        <p class="eyebrow">Category 01</p>
+        <h2>Napkins</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Napkin Design 1">
+                <img src="napkin1.jpg" alt="Napkin design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Napkins','Napkin Design 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Napkin Design 2">
+                <img src="napkin2.jpg" alt="Napkin design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Napkins','Napkin Design 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- PRINTED SUITS -->
+
+<section class="section product-section" id="printed-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 02</p>
+        <h2>Printed Suits</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Printed Suit 1">
+                <img src="printed-suit1.jpg" alt="Printed suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Printed Suits','Printed Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Printed Suit 2">
+                <img src="printed-suit2.jpg" alt="Printed suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Printed Suits','Printed Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- CASUAL SUITS -->
+
+<section class="section product-section" id="casual-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 03</p>
+        <h2>Casual Suits</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Casual Suit 1">
+                <img src="casual-suit1.jpg" alt="Casual suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Casual Suits','Casual Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Casual Suit 2">
+                <img src="casual-suit2.jpg" alt="Casual suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Casual Suits','Casual Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- EMBROIDERED SUITS -->
+
+<section class="section product-section" id="embroidered-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 04</p>
+        <h2>Embroidered Suits</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Embroidered Suit 1">
+                <img src="embroidered-suit1.jpg" alt="Embroidered suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Embroidered Suits','Embroidered Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Embroidered Suit 2">
+                <img src="embroidered-suit2.jpg" alt="Embroidered suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Embroidered Suits','Embroidered Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- BIN SAEED SUITS: 120 INDIVIDUAL DESIGNS -->
+
+<section class="section product-section bin-saeed-section"
+         id="bin-saeed-suits">
+
+    <div class="section-heading">
+        <p class="eyebrow">Category 05 • 120 Designs</p>
+        <h2>Bin Saeed Suits</h2>
+        <p>Rs. 2,499 each. Tap any picture to view it full-screen.</p>
+    </div>
+
+    <div class="bin-saeed-list" id="binSaeedProducts"></div>
+</section>
+
+<!-- CHIFFON DUPATTAS -->
+
+<section class="section product-section" id="chiffon-dupattas">
+    <div class="section-heading">
+        <p class="eyebrow">Category 06</p>
+        <h2>Chiffon Dupattas</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Chiffon Dupatta 1">
+                <img src="chiffon-dupatta1.jpg" alt="Chiffon dupatta design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Chiffon Dupatta 2">
+                <img src="chiffon-dupatta2.jpg" alt="Chiffon dupatta design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
