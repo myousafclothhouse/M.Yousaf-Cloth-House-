@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>M. Yousaf Cloth House</title>
-<meta name="description" content="Explore clothing, suits, napkins and dupattas at M. Yousaf Cloth House. Delivery available within Sialkot city limits.">
+<meta name="description" content="Explore Bin Saeed suits, printed suits, casual suits, embroidered suits, napkins and dupattas at M. Yousaf Cloth House.">
 <meta name="theme-color" content="#171613">
 
 <style>
@@ -29,7 +29,7 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 110px;
+    scroll-padding-top: 125px;
 }
 
 body {
@@ -37,20 +37,17 @@ body {
     background: var(--cream);
     color: var(--text);
     line-height: 1.6;
-    position: relative;
-    isolation: isolate;
 }
 
-/* Faint logo watermark across the entire website */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
     background-image: url("logo.png");
-    background-position: center center;
+    background-position: center;
     background-repeat: repeat;
     background-size: 260px auto;
-    opacity: 0.045;
+    opacity: .035;
     pointer-events: none;
     z-index: -1;
 }
@@ -60,19 +57,21 @@ a {
     text-decoration: none;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
     font: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
+button {
+    cursor: pointer;
 }
 
-/* Announcement bar */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Announcement */
+
 .announcement {
     background: var(--black);
     color: var(--beige);
@@ -83,9 +82,10 @@ img {
     font-weight: bold;
 }
 
-/* Header and full logo on the left */
+/* Navigation */
+
 header {
-    background: rgba(248, 244, 236, 0.97);
+    background: rgba(248,244,236,.98);
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
@@ -94,73 +94,68 @@ header {
 
 .navbar {
     max-width: 1200px;
-    margin: auto;
-    min-height: 88px;
+    min-height: 85px;
     padding: 12px 22px;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
+    gap: 18px;
 }
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 13px;
-    min-width: 0;
+    gap: 12px;
 }
 
 .brand img {
-    width: 68px;
-    height: 68px;
+    width: 65px;
+    height: 65px;
     object-fit: contain;
-    flex-shrink: 0;
-}
-
-.brand-text {
-    line-height: 1.3;
 }
 
 .brand-text h1 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: clamp(15px, 2.4vw, 23px);
+    line-height: 1.3;
     color: var(--black);
-    letter-spacing: 0.4px;
 }
 
 .brand-text p {
+    color: var(--muted);
     font-size: 10px;
     letter-spacing: 2px;
-    color: var(--muted);
     margin-top: 4px;
 }
 
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 19px;
     flex-wrap: wrap;
+    gap: 16px;
 }
 
 .nav-links a {
     font-size: 13px;
     font-weight: bold;
-    transition: color 0.2s;
 }
 
 .nav-links a:hover {
-    color: #947347;
+    color: #92744b;
 }
 
-/* Hero */
-.hero {
+/* General sections */
+
+.section {
     max-width: 1200px;
+    padding: 42px 22px;
     margin: auto;
-    padding: 55px 22px 48px;
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    align-items: center;
-    gap: 40px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 28px;
 }
 
 .eyebrow {
@@ -169,28 +164,64 @@ header {
     text-transform: uppercase;
     font-size: 11px;
     font-weight: bold;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
+}
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(27px, 4vw, 38px);
+    font-weight: normal;
+    color: var(--black);
+}
+
+.section-heading p:last-child {
+    color: var(--muted);
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+/* Hero */
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    padding: 55px 22px 48px;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    align-items: center;
+    gap: 40px;
 }
 
 .hero h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: clamp(34px, 5vw, 57px);
-    line-height: 1.15;
-    color: var(--black);
-    margin-bottom: 18px;
     font-weight: normal;
+    line-height: 1.15;
+    margin-bottom: 18px;
+    color: var(--black);
 }
 
 .hero-copy > p:not(.eyebrow) {
     color: var(--muted);
     max-width: 510px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
-.hero-buttons {
+.hero-logo {
+    min-height: 270px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border: 1px solid var(--border);
+    background: rgba(255,253,249,.8);
+}
+
+.hero-logo img {
+    max-width: 330px;
+    max-height: 290px;
+    width: 100%;
+    object-fit: contain;
 }
 
 .btn {
@@ -201,11 +232,10 @@ header {
     border: 1px solid var(--black);
     background: var(--black);
     color: white;
-    cursor: pointer;
     font-weight: bold;
     font-size: 13px;
     text-align: center;
-    transition: 0.2s;
+    transition: .2s;
 }
 
 .btn:hover {
@@ -221,79 +251,56 @@ header {
     background: var(--beige);
 }
 
-.hero-logo {
-    min-height: 270px;
+.hero-buttons {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-    border: 1px solid var(--border);
-    background: rgba(255, 253, 249, 0.7);
-}
-
-.hero-logo img {
-    width: 100%;
-    max-width: 330px;
-    max-height: 290px;
-    object-fit: contain;
-}
-
-/* General sections */
-.section {
-    max-width: 1200px;
-    margin: auto;
-    padding: 42px 22px;
-}
-
-.section-heading {
-    text-align: center;
-    margin-bottom: 28px;
-}
-
-.section-heading .eyebrow {
-    margin-bottom: 5px;
-}
-
-.section-heading h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-weight: normal;
-    font-size: clamp(27px, 4vw, 38px);
-    color: var(--black);
-}
-
-.section-heading p {
-    color: var(--muted);
-    font-size: 14px;
-    margin-top: 7px;
-}
-
-/* Category navigation */
-.category-links {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
     gap: 12px;
 }
 
-.category-links a {
-    border: 1px solid var(--border);
-    background: rgba(255, 253, 249, 0.84);
-    padding: 18px 12px;
-    text-align: center;
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 17px;
-    transition: 0.2s;
+/* Clickable category cards */
+
+.category-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
 }
 
-.category-links a:hover {
+.category-card {
+    display: block;
+    padding: 22px 15px;
+    text-align: center;
+    background: rgba(255,253,249,.94);
+    border: 1px solid var(--border);
+    transition: .2s;
+}
+
+.category-card:hover {
     background: var(--black);
     color: var(--beige);
 }
 
-/* Product categories and product cards */
+.category-card h3 {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: normal;
+}
+
+.category-card p {
+    font-size: 12px;
+    margin-top: 5px;
+    color: var(--muted);
+}
+
+.category-card:hover p {
+    color: var(--beige);
+}
+
+/* Standard product sections */
+
 .product-section {
-    padding-top: 35px;
-    padding-bottom: 35px;
-    border-top: 1px solid rgba(183, 154, 107, 0.25);
+    padding-top: 38px;
+    padding-bottom: 40px;
+    border-top: 1px solid rgba(183,154,107,.3);
 }
 
 .product-grid {
@@ -304,22 +311,33 @@ header {
 
 .product-card {
     min-width: 0;
-    background: rgba(255, 253, 249, 0.91);
+    background: rgba(255,253,249,.96);
     border: 1px solid var(--border);
     overflow: hidden;
 }
 
-.product-card img {
+.product-picture {
     width: 100%;
     height: 310px;
-    object-fit: cover;
+    border: 0;
+    padding: 0;
     background: #eee6d9;
-    cursor: pointer;
-    transition: transform 0.25s;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.product-card img:hover {
-    transform: scale(1.015);
+.product-picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform .25s;
+}
+
+.product-picture:hover img {
+    transform: scale(1.02);
 }
 
 .product-info {
@@ -327,7 +345,7 @@ header {
 }
 
 .product-info h4 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 19px;
     color: var(--black);
     margin-bottom: 5px;
@@ -348,7 +366,55 @@ header {
     width: 100%;
 }
 
-/* Policy strip */
+/* Bin Saeed: one design per row */
+
+.bin-saeed-section {
+    background: rgba(232,220,200,.2);
+}
+
+.bin-saeed-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 850px;
+    margin: auto;
+}
+
+.bin-dress {
+    background: var(--white);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.bin-dress .product-picture {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    max-height: 850px;
+    aspect-ratio: 4 / 5;
+    background: #eee6d9;
+}
+
+.bin-dress .product-picture img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.bin-dress .product-info {
+    padding: 20px;
+}
+
+.bin-dress .product-info h4 {
+    font-size: 22px;
+}
+
+.bin-dress .order-product {
+    max-width: 300px;
+}
+
+/* Ordering and delivery */
+
 .policy-strip {
     background: var(--black);
     color: var(--beige);
@@ -357,7 +423,7 @@ header {
 }
 
 .policy-strip h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-weight: normal;
     font-size: 27px;
     margin-bottom: 12px;
@@ -368,12 +434,13 @@ header {
     margin: auto;
     display: flex;
     justify-content: center;
-    gap: 12px 28px;
     flex-wrap: wrap;
+    gap: 12px 28px;
     font-size: 13px;
 }
 
 /* Order form */
+
 .order-area {
     max-width: 850px;
     margin: auto;
@@ -381,13 +448,13 @@ header {
 }
 
 .order-panel {
-    background: rgba(255, 253, 249, 0.94);
+    background: rgba(255,253,249,.97);
     border: 1px solid var(--border);
     padding: clamp(18px, 4vw, 35px);
 }
 
 .order-panel h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 31px;
     font-weight: normal;
     text-align: center;
@@ -428,7 +495,7 @@ header {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--border);
-    background: #fff;
+    background: white;
     color: var(--text);
     border-radius: 0;
 }
@@ -445,51 +512,45 @@ header {
     outline-offset: 1px;
 }
 
-.bank-box {
-    margin-top: 24px;
-    padding: 18px;
-    background: #f1e8d9;
-    border: 1px solid var(--border);
-}
-
-.bank-box h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 21px;
-    margin-bottom: 8px;
-}
-
-.bank-box p {
-    font-size: 14px;
-    margin: 4px 0;
-    overflow-wrap: anywhere;
-}
-
-.notice {
-    margin-top: 13px;
-    font-size: 12px;
-    color: var(--muted);
-}
-
-.form-submit {
-    width: 100%;
+.order-actions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
     margin-top: 22px;
-    border: 0;
+}
+
+.order-actions .btn {
+    width: 100%;
+    min-height: 48px;
 }
 
 .form-message {
-    margin-top: 14px;
+    margin-top: 15px;
+    padding: 12px;
+    background: #f1e8d9;
+    border: 1px solid var(--border);
     font-size: 13px;
-    color: #665032;
+    color: #51412c;
     overflow-wrap: anywhere;
 }
 
-/* Outside Sialkot */
+.form-message:empty {
+    display: none;
+}
+
+.order-note {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 14px;
+    text-align: center;
+}
+
 .outside-city {
-    margin-top: 20px;
+    margin-top: 22px;
     padding: 18px;
     border: 1px solid var(--border);
     text-align: center;
-    background: rgba(232, 220, 200, 0.5);
+    background: rgba(232,220,200,.5);
 }
 
 .outside-city p {
@@ -505,6 +566,7 @@ header {
 }
 
 /* Contact and footer */
+
 .contact-section {
     background: #eee5d7;
     text-align: center;
@@ -512,7 +574,7 @@ header {
 }
 
 .contact-section h2 {
-    font-family: Georgia, "Times New Roman", serif;
+    font-family: Georgia, serif;
     font-size: 29px;
     font-weight: normal;
     margin-bottom: 8px;
@@ -540,22 +602,19 @@ footer {
     margin-bottom: 15px;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
-}
+/* Floating logo */
 
-/* Small corner logo */
 .corner-logo {
     position: fixed;
     bottom: 14px;
     right: 14px;
     z-index: 90;
-    width: 58px;
-    height: 58px;
+    width: 55px;
+    height: 55px;
     padding: 5px;
-    background: rgba(255, 253, 249, 0.95);
+    background: rgba(255,253,249,.96);
     border: 1px solid var(--border);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+    box-shadow: 0 2px 10px rgba(0,0,0,.12);
 }
 
 .corner-logo img {
@@ -564,25 +623,36 @@ footer {
     object-fit: contain;
 }
 
-/* Image viewer */
+/* Full-screen image viewer */
+
 .image-viewer {
     display: none;
     position: fixed;
     inset: 0;
     z-index: 300;
-    background: rgba(0, 0, 0, 0.91);
+    background: rgba(0,0,0,.94);
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 55px 12px;
 }
 
 .image-viewer.open {
     display: flex;
 }
 
+.viewer-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .image-viewer img {
-    max-width: 95%;
-    max-height: 85vh;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
     object-fit: contain;
 }
 
@@ -590,35 +660,47 @@ footer {
 .viewer-prev,
 .viewer-next {
     position: absolute;
+    z-index: 2;
     color: white;
-    background: rgba(30, 30, 30, 0.8);
-    border: 1px solid rgba(255,255,255,0.5);
-    padding: 10px 14px;
-    cursor: pointer;
-    font-size: 18px;
+    background: rgba(30,30,30,.85);
+    border: 1px solid rgba(255,255,255,.5);
+    padding: 9px 15px;
+    font-size: 24px;
 }
 
 .viewer-close {
-    top: 18px;
-    right: 18px;
+    top: 12px;
+    right: 12px;
 }
 
 .viewer-prev {
-    left: 12px;
+    left: 10px;
     top: 50%;
 }
 
 .viewer-next {
-    right: 12px;
+    right: 10px;
     top: 50%;
 }
+
+.viewer-caption {
+    position: absolute;
+    bottom: 12px;
+    left: 60px;
+    right: 60px;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Mobile layout */
 
 @media (max-width: 760px) {
     .navbar {
         flex-wrap: wrap;
         justify-content: center;
-        gap: 12px;
         padding: 10px 14px;
+        gap: 12px;
     }
 
     .brand {
@@ -627,13 +709,13 @@ footer {
     }
 
     .brand img {
-        width: 58px;
-        height: 58px;
+        width: 56px;
+        height: 56px;
     }
 
     .nav-links {
         justify-content: center;
-        gap: 10px 16px;
+        gap: 10px 15px;
     }
 
     .hero {
@@ -650,12 +732,14 @@ footer {
         max-height: 220px;
     }
 
-    .category-links {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .product-picture {
+        height: 235px;
     }
 
-    .product-card img {
-        height: 235px;
+    .bin-dress .product-picture {
+        min-height: 260px;
+        max-height: 700px;
+        aspect-ratio: 4 / 5;
     }
 }
 
@@ -664,8 +748,8 @@ footer {
         gap: 10px;
     }
 
-    .product-card img {
-        height: 175px;
+    .product-picture {
+        height: 180px;
     }
 
     .product-info {
@@ -680,6 +764,14 @@ footer {
         font-size: 12px;
     }
 
+    .category-card {
+        padding: 17px 8px;
+    }
+
+    .category-card h3 {
+        font-size: 16px;
+    }
+
     .form-grid {
         grid-template-columns: 1fr;
     }
@@ -688,13 +780,25 @@ footer {
         grid-column: auto;
     }
 
-    .category-links a {
-        font-size: 15px;
+    .order-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .bin-dress .product-info {
+        padding: 15px;
+    }
+
+    .bin-dress .product-info h4 {
+        font-size: 20px;
+    }
+
+    .bin-dress .product-picture {
+        min-height: 220px;
     }
 
     .corner-logo {
-        width: 48px;
-        height: 48px;
+        width: 46px;
+        height: 46px;
     }
 }
 </style>
@@ -709,7 +813,7 @@ footer {
 <header>
     <nav class="navbar">
         <a href="#home" class="brand" aria-label="M. Yousaf Cloth House home">
-            <img src="logo.png" alt="M. Yousaf Cloth House full logo">
+            <img src="logo.png" alt="M. Yousaf Cloth House logo">
             <div class="brand-text">
                 <h1>M. Yousaf Cloth House</h1>
                 <p>STYLE • QUALITY • ELEGANCE</p>
@@ -726,313 +830,450 @@ footer {
 </header>
 
 <main>
-    <section class="hero" id="home">
-        <div class="hero-copy">
-            <p class="eyebrow">Welcome to our collection</p>
-            <h2>Everyday Style, Timeless Elegance.</h2>
-            <p>
-                Discover our collection of suits, dupattas and everyday
-                essentials at M. Yousaf Cloth House. Browse the categories
-                and contact us to place your order.
-            </p>
-            <div class="hero-buttons">
-                <a class="btn" href="#categories">Explore Collection</a>
-                <a class="btn btn-outline" href="#order">How to Order</a>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+    <div class="hero-copy">
+        <p class="eyebrow">Welcome to our collection</p>
+        <h2>Everyday Style, Timeless Elegance.</h2>
+        <p>
+            Discover suits, dupattas and everyday essentials at
+            M. Yousaf Cloth House. Browse our designs, select your
+            favourite product and send us an order enquiry.
+        </p>
+        <div class="hero-buttons">
+            <a class="btn" href="#categories">Explore Collection</a>
+            <a class="btn btn-outline" href="#order">How to Order</a>
+        </div>
+    </div>
+
+    <div class="hero-logo">
+        <img src="logo.png" alt="M. Yousaf Cloth House full logo">
+    </div>
+</section>
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+    <div class="section-heading">
+        <p class="eyebrow">Browse our collection</p>
+        <h2>Shop by Category</h2>
+        <p>Tap a category to explore its designs.</p>
+    </div>
+
+    <div class="category-links">
+        <a class="category-card" href="#napkins">
+            <h3>Napkins</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#printed-suits">
+            <h3>Printed Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#casual-suits">
+            <h3>Casual Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#embroidered-suits">
+            <h3>Embroidered Suits</h3>
+            <p>Explore collection →</p>
+        </a>
+
+        <a class="category-card" href="#bin-saeed-suits">
+            <h3>Bin Saeed Suits</h3>
+            <p>100 designs • Rs. 2,499 each →</p>
+        </a>
+
+        <a class="category-card" href="#chiffon-dupattas">
+            <h3>Chiffon Dupattas</h3>
+            <p>Explore collection →</p>
+        </a>
+    </div>
+</section>
+
+<!-- NAPKINS -->
+
+<section class="section product-section" id="napkins">
+    <div class="section-heading">
+        <p class="eyebrow">Category 01</p>
+        <h2>Napkins</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Napkin Design 1">
+                <img src="napkin1.jpg" alt="Napkin design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Napkins','Napkin Design 1')">
+                    Select This Product
+                </button>
             </div>
-        </div>
+        </article>
 
-        <div class="hero-logo">
-            <img src="logo.png" alt="M. Yousaf Cloth House logo">
-        </div>
-    </section>
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Napkin Design 2">
+                <img src="napkin2.jpg" alt="Napkin design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Napkins','Napkin Design 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
 
-    <section class="section" id="categories">
-        <div class="section-heading">
-            <p class="eyebrow">Browse our collection</p>
-            <h2>Shop by Category</h2>
-            <p>Choose a category to explore its products.</p>
-        </div>
+<!-- PRINTED SUITS -->
 
-        <div class="category-links">
-            <a href="#napkins">Napkins</a>
-            <a href="#printed-suits">Printed Suits</a>
-            <a href="#casual-suits">Casual Suits</a>
-            <a href="#embroidered-suits">Embroidered Suits</a>
-            <a href="#bin-saeed-suits">Bin Saeed Suits</a>
-            <a href="#chiffon-dupattas">Chiffon Dupattas</a>
-        </div>
-    </section>
+<section class="section product-section" id="printed-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 02</p>
+        <h2>Printed Suits</h2>
+    </div>
 
-    <section class="section product-section" id="napkins">
-        <div class="section-heading">
-            <p class="eyebrow">Category 01</p>
-            <h2>Napkins</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="napkin1.jpg" alt="Napkin design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Napkin Design 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Napkins - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="napkin2.jpg" alt="Napkin design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Napkin Design 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Napkins - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Printed Suit 1">
+                <img src="printed-suit1.jpg" alt="Printed suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Printed Suits','Printed Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
 
-    <section class="section product-section" id="printed-suits">
-        <div class="section-heading">
-            <p class="eyebrow">Category 02</p>
-            <h2>Printed Suits</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="printed-suit1.jpg" alt="Printed suit design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Printed Suit 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Printed Suits - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="printed-suit2.jpg" alt="Printed suit design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Printed Suit 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Printed Suits - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Printed Suit 2">
+                <img src="printed-suit2.jpg" alt="Printed suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Printed Suits','Printed Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
 
-    <section class="section product-section" id="casual-suits">
-        <div class="section-heading">
-            <p class="eyebrow">Category 03</p>
-            <h2>Casual Suits</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="casual-suit1.jpg" alt="Casual suit design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Casual Suit 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Casual Suits - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="casual-suit2.jpg" alt="Casual suit design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Casual Suit 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Casual Suits - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+<!-- CASUAL SUITS -->
 
-    <section class="section product-section" id="embroidered-suits">
-        <div class="section-heading">
-            <p class="eyebrow">Category 04</p>
-            <h2>Embroidered Suits</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="embroidered-suit1.jpg" alt="Embroidered suit design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Embroidered Suit 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Embroidered Suits - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="embroidered-suit2.jpg" alt="Embroidered suit design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Embroidered Suit 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Embroidered Suits - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+<section class="section product-section" id="casual-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 03</p>
+        <h2>Casual Suits</h2>
+    </div>
 
-    <section class="section product-section" id="bin-saeed-suits">
-        <div class="section-heading">
-            <p class="eyebrow">Category 05</p>
-            <h2>Bin Saeed Suits</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="bin-saeed-suit1.jpg" alt="Bin Saeed suit design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Bin Saeed Suit 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Bin Saeed Suits - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="bin-saeed-suit2.jpg" alt="Bin Saeed suit design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Bin Saeed Suit 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Bin Saeed Suits - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Casual Suit 1">
+                <img src="casual-suit1.jpg" alt="Casual suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Casual Suits','Casual Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
 
-    <section class="section product-section" id="chiffon-dupattas">
-        <div class="section-heading">
-            <p class="eyebrow">Category 06</p>
-            <h2>Chiffon Dupattas</h2>
-        </div>
-        <div class="product-grid">
-            <article class="product-card">
-                <img src="chiffon-dupatta1.jpg" alt="Chiffon dupatta design 1" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Chiffon Dupatta 1</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Chiffon Dupattas - Design 1')">Order / Enquire</button>
-                </div>
-            </article>
-            <article class="product-card">
-                <img src="chiffon-dupatta2.jpg" alt="Chiffon dupatta design 2" loading="lazy" onclick="openViewer(this)">
-                <div class="product-info">
-                    <h4>Chiffon Dupatta 2</h4>
-                    <p>Contact us for product details and availability.</p>
-                    <p class="product-price">Price: To be confirmed</p>
-                    <button class="btn order-product" onclick="chooseProduct('Chiffon Dupattas - Design 2')">Order / Enquire</button>
-                </div>
-            </article>
-        </div>
-    </section>
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Casual Suit 2">
+                <img src="casual-suit2.jpg" alt="Casual suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Casual Suits','Casual Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
 
-    <section class="policy-strip">
-        <h2>Ordering & Delivery</h2>
-        <div class="policy-items">
-            <span>Delivery within Sialkot city limits</span>
-            <span>Delivery charges: Rs. 250</span>
-            <span>Bank transfer only</span>
-            <span>Payment screenshot required</span>
-        </div>
-    </section>
+<!-- EMBROIDERED SUITS -->
 
-    <section class="order-area" id="order">
-        <div class="order-panel">
-            <h2>Place Your Order</h2>
-            <p class="order-intro">
-                Fill in your details. Your order information will be prepared
-                as a WhatsApp message for confirmation.
+<section class="section product-section" id="embroidered-suits">
+    <div class="section-heading">
+        <p class="eyebrow">Category 04</p>
+        <h2>Embroidered Suits</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Embroidered Suit 1">
+                <img src="embroidered-suit1.jpg" alt="Embroidered suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Embroidered Suits','Embroidered Suit 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Embroidered Suit 2">
+                <img src="embroidered-suit2.jpg" alt="Embroidered suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Embroidered Suits','Embroidered Suit 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- BIN SAEED SUITS -->
+
+<section class="section product-section bin-saeed-section"
+         id="bin-saeed-suits">
+
+    <div class="section-heading">
+        <p class="eyebrow">Category 05 • 100 Designs</p>
+        <h2>Bin Saeed Suits</h2>
+        <p>Rs. 2,499 per suit. Tap any picture to view it full-screen.</p>
+    </div>
+
+    <div class="bin-saeed-list" id="binSaeedProducts"></div>
+</section>
+
+<!-- CHIFFON DUPATTAS -->
+
+<section class="section product-section" id="chiffon-dupattas">
+    <div class="section-heading">
+        <p class="eyebrow">Category 06</p>
+        <h2>Chiffon Dupattas</h2>
+    </div>
+
+    <div class="product-grid">
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Chiffon Dupatta 1">
+                <img src="chiffon-dupatta1.jpg" alt="Chiffon dupatta design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 1')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+
+        <article class="product-card">
+            <button class="product-picture" type="button"
+                    onclick="openViewer(this)" aria-label="View Chiffon Dupatta 2">
+                <img src="chiffon-dupatta2.jpg" alt="Chiffon dupatta design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product"
+                        onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 2')">
+                    Select This Product
+                </button>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- DELIVERY POLICIES -->
+
+<section class="policy-strip">
+    <h2>Ordering & Delivery</h2>
+    <div class="policy-items">
+        <span>Delivery within Sialkot city limits</span>
+        <span>Delivery charges: Rs. 250</span>
+        <span>Order confirmation through Instagram or WhatsApp</span>
+        <span>Payment details shared privately after confirmation</span>
+    </div>
+</section>
+
+<!-- ORDER FORM -->
+
+<section class="order-area" id="order">
+    <div class="order-panel">
+        <h2>Place Your Order</h2>
+        <p class="order-intro">
+            Select a product, enter your details and send your order enquiry.
+        </p>
+
+        <form id="orderForm">
+            <div class="form-grid">
+
+                <div class="form-group">
+                    <label for="customerName">Full Name *</label>
+                    <input id="customerName" name="customerName"
+                           required autocomplete="name"
+                           placeholder="Enter your name">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number *</label>
+                    <input id="customerPhone" name="customerPhone"
+                           type="tel" required autocomplete="tel"
+                           placeholder="03XX XXXXXXX">
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City *</label>
+                    <input id="city" name="city" required
+                           placeholder="Enter your city">
+                </div>
+
+                <div class="form-group">
+                    <label for="productCategory">Product Category *</label>
+                    <select id="productCategory" name="productCategory" required>
+                        <option value="">Choose a category</option>
+                        <option>Napkins</option>
+                        <option>Printed Suits</option>
+                        <option>Casual Suits</option>
+                        <option>Embroidered Suits</option>
+                        <option>Bin Saeed Suits</option>
+                        <option>Chiffon Dupattas</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label for="productDetails">Product / Design *</label>
+                    <input id="productDetails" name="productDetails"
+                           required placeholder="Select a product or type its name">
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Quantity *</label>
+                    <input id="quantity" name="quantity"
+                           type="number" min="1" step="1"
+                           value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="deliveryMethod">Delivery Method *</label>
+                    <select id="deliveryMethod" name="deliveryMethod" required>
+                        <option value="">Choose an option</option>
+                        <option>Delivery within Sialkot</option>
+                        <option>Pickup</option>
+                        <option>Outside Sialkot - Enquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group full">
+                    <label for="address">Delivery Address</label>
+                    <textarea id="address" name="address"
+                              placeholder="Enter your address if delivery is needed"></textarea>
+                </div>
+
+                <div class="form-group full">
+                    <label for="notes">Additional Notes (Optional)</label>
+                    <textarea id="notes" name="notes"
+                              placeholder="Ask about price, availability or fabric"></textarea>
+                </div>
+            </div>
+
+            <p class="order-note">
+                This form does not collect payment or bank details.
+                Product availability, price and delivery charges will be confirmed privately.
             </p>
 
-            <form id="orderForm">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="customerName">Full Name *</label>
-                        <input id="customerName" name="customerName" required autocomplete="name" placeholder="Enter your name">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="customerPhone">Phone Number *</label>
-                        <input id="customerPhone" name="customerPhone" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="city">City *</label>
-                        <input id="city" name="city" required placeholder="Enter your city">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="productCategory">Product Category *</label>
-                        <select id="productCategory" name="productCategory" required>
-                            <option value="">Choose a category</option>
-                            <option>Napkins</option>
-                            <option>Printed Suits</option>
-                            <option>Casual Suits</option>
-                            <option>Embroidered Suits</option>
-                            <option>Bin Saeed Suits</option>
-                            <option>Chiffon Dupattas</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group full">
-                        <label for="productDetails">Product / Design Details *</label>
-                        <input id="productDetails" name="productDetails" required placeholder="Enter the product name or design">
-                    </div>
-
-                    <div class="form-group full">
-                        <label for="address">Delivery Address (Sialkot orders) *</label>
-                        <textarea id="address" name="address" required placeholder="Enter your complete address"></textarea>
-                    </div>
-
-                    <div class="form-group full">
-                        <label for="notes">Additional Notes (Optional)</label>
-                        <textarea id="notes" name="notes" placeholder="Quantity, colour, or any questions"></textarea>
-                    </div>
-                </div>
-
-                <div class="bank-box">
-                    <h3>Bank Transfer Details</h3>
-                    <p><strong>Bank:</strong> Meezan Bank</p>
-                    <p><strong>Account Title:</strong> Hassam Mazhar</p>
-                    <p><strong>Account Number:</strong> Add account number here</p>
-                    <p><strong>IBAN:</strong> Add IBAN here</p>
-                    <p class="notice">
-                        Please confirm the payable amount and bank details with us
-                        before transferring money. After payment, send your payment
-                        screenshot through WhatsApp. Orders are processed after
-                        payment is received and manually confirmed.
-                    </p>
-                </div>
-
-                <button class="btn form-submit" type="submit">
-                    Prepare Order on WhatsApp
+            <div class="order-actions">
+                <button class="btn" type="button" id="instagramButton">
+                    Copy Order & Open Instagram
                 </button>
 
-                <p class="form-message" id="formMessage" role="status"></p>
-            </form>
+                <button class="btn btn-outline" type="button" id="whatsappButton">
+                    Continue on WhatsApp
+                </button>
+            </div>
 
-            <div class="outside-city">
-                <p>
-                    <strong>Ordering from outside Sialkot?</strong><br>
-                    Please contact us first through WhatsApp or Instagram.
-                    Orders outside Sialkot are not automatically confirmed.
-                </p>
-                <div class="contact-links">
-                    <a class="btn" href="https://ig.me/m/m.yousafcloth" target="_blank" rel="noopener">Instagram Message</a>
-                    <a class="btn btn-outline" href="https://www.instagram.com/m.yousafcloth/" target="_blank" rel="noopener">Visit Instagram</a>
-                </div>
+            <p class="form-message" id="formMessage"
+               role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="outside-city">
+            <p>
+                <strong>Need help with your order?</strong><br>
+                Contact us for product details, prices and delivery options.
+            </p>
+            <div class="contact-links">
+                <a class="btn" href="https://ig.me/m/m.yousafcloth"
+                   target="_blank" rel="noopener">
+                    Instagram Message
+                </a>
+                <a class="btn btn-outline"
+                   href="https://www.instagram.com/m.yousafcloth/"
+                   target="_blank" rel="noopener">
+                    Visit Instagram
+                </a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <section class="contact-section" id="contact">
-        <h2>Connect With Us</h2>
-        <p>For product details, availability and order enquiries, contact us on Instagram or TikTok.</p>
-        <div class="contact-links">
-            <a class="btn" href="https://www.instagram.com/m.yousafcloth/" target="_blank" rel="noopener">Instagram</a>
-            <a class="btn btn-outline" href="https://ig.me/m/m.yousafcloth" target="_blank" rel="noopener">Send a Message</a>
-            <a class="btn btn-outline" href="https://www.tiktok.com/@m.yousafcloth" target="_blank" rel="noopener">TikTok</a>
-        </div>
-    </section>
+<!-- CONTACT -->
+
+<section class="contact-section" id="contact">
+    <h2>Connect With Us</h2>
+    <p>For product details, availability and order enquiries, contact us.</p>
+
+    <div class="contact-links">
+        <a class="btn" href="https://www.instagram.com/m.yousafcloth/"
+           target="_blank" rel="noopener">Instagram</a>
+
+        <a class="btn btn-outline" href="https://ig.me/m/m.yousafcloth"
+           target="_blank" rel="noopener">Send a Message</a>
+
+        <a class="btn btn-outline" href="https://www.tiktok.com/@m.yousafcloth"
+           target="_blank" rel="noopener">TikTok</a>
+    </div>
+</section>
+
 </main>
 
 <footer>
@@ -1042,138 +1283,302 @@ footer {
         <a href="#order">How to Order</a>
         <a href="#contact">Contact</a>
     </div>
+
     <p>©️ <span id="year"></span> M. Yousaf Cloth House. All rights reserved.</p>
 </footer>
 
-<!-- Optional small logo fixed at the bottom-right -->
 <a class="corner-logo" href="#home" aria-label="Back to top">
     <img src="logo.png" alt="M. Yousaf Cloth House">
 </a>
 
-<!-- Product image viewer -->
-<div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Product image viewer">
-    <button class="viewer-close" type="button" onclick="closeViewer()" aria-label="Close image">✕</button>
-    <button class="viewer-prev" type="button" onclick="changeImage(-1)" aria-label="Previous image">‹</button>
-    <img id="viewerImage" src="" alt="Expanded product image">
-    <button class="viewer-next" type="button" onclick="changeImage(1)" aria-label="Next image">›</button>
+<!-- FULL-SCREEN IMAGE VIEWER -->
+
+<div class="image-viewer" id="imageViewer"
+     role="dialog" aria-modal="true"
+     aria-label="Product image viewer">
+
+    <button class="viewer-close" type="button"
+            onclick="closeViewer()" aria-label="Close image">✕</button>
+
+    <button class="viewer-prev" type="button"
+            onclick="changeImage(-1)" aria-label="Previous image">‹</button>
+
+    <div class="viewer-content">
+        <img id="viewerImage" src="" alt="Expanded product image">
+    </div>
+
+    <button class="viewer-next" type="button"
+            onclick="changeImage(1)" aria-label="Next image">›</button>
+
+    <p class="viewer-caption" id="viewerCaption"></p>
 </div>
 
 <script>
-/*
-  IMPORTANT:
-  Replace this placeholder with the real WhatsApp number in international
-  format, using digits only. For a Pakistani number, use 92 followed by the
-  mobile number without its first zero.
-*/
+/* Add your real WhatsApp number before enabling WhatsApp orders. */
 const WHATSAPP_NUMBER = "923XXXXXXXXX";
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const INSTAGRAM_DM = "https://ig.me/m/m.yousafcloth";
 
-function chooseProduct(productName) {
-    const details = document.getElementById("productDetails");
-    const category = document.getElementById("productCategory");
+document.getElementById("year").textContent =
+    new Date().getFullYear();
 
-    details.value = productName;
+/* Generate 100 Bin Saeed dresses */
 
-    const categoryMap = {
-        "Napkins": "Napkins",
-        "Printed Suits": "Printed Suits",
-        "Casual Suits": "Casual Suits",
-        "Embroidered Suits": "Embroidered Suits",
-        "Bin Saeed Suits": "Bin Saeed Suits",
-        "Chiffon Dupattas": "Chiffon Dupattas"
+const binSaeedContainer =
+    document.getElementById("binSaeedProducts");
+
+const binSaeedFragment = document.createDocumentFragment();
+
+for (let i = 1; i <= 100; i++) {
+    const card = document.createElement("article");
+    card.className = "bin-dress product-card";
+
+    const pictureButton = document.createElement("button");
+    pictureButton.type = "button";
+    pictureButton.className = "product-picture";
+    pictureButton.setAttribute(
+        "aria-label",
+        "View Bin Saeed Dress " + i + " full-screen"
+    );
+
+    const img = document.createElement("img");
+    img.src = "bin-saeed-suit" + i + ".jpg";
+    img.alt = "Bin Saeed Dress " + i;
+    img.loading = i <= 2 ? "eager" : "lazy";
+
+    img.onerror = function() {
+        this.alt = "Add image file: bin-saeed-suit" + i + ".jpg";
+        this.style.opacity = "0.25";
     };
 
-    for (const name in categoryMap) {
-        if (productName.startsWith(name)) {
-            category.value = categoryMap[name];
-            break;
-        }
-    }
+    pictureButton.appendChild(img);
 
-    document.getElementById("order").scrollIntoView({ behavior: "smooth" });
-    details.focus({ preventScroll: true });
+    pictureButton.addEventListener("click", function() {
+        openViewer(pictureButton);
+    });
+
+    const info = document.createElement("div");
+    info.className = "product-info";
+
+    const title = document.createElement("h4");
+    title.textContent = "Bin Saeed Dress " + i;
+
+    const description = document.createElement("p");
+    description.textContent = "Bin Saeed suit design " + i + ".";
+
+    const price = document.createElement("p");
+    price.className = "product-price";
+    price.textContent = "Price: Rs. 2,499";
+
+    const orderButton = document.createElement("button");
+    orderButton.type = "button";
+    orderButton.className = "btn order-product";
+    orderButton.textContent = "Select This Product";
+
+    orderButton.addEventListener("click", function() {
+        chooseProduct("Bin Saeed Suits", "Bin Saeed Dress " + i);
+    });
+
+    info.append(title, description, price, orderButton);
+    card.append(pictureButton, info);
+    binSaeedFragment.appendChild(card);
 }
 
-document.getElementById("orderForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+binSaeedContainer.appendChild(binSaeedFragment);
 
-    const messageElement = document.getElementById("formMessage");
-    const city = document.getElementById("city").value.trim();
-    const address = document.getElementById("address").value.trim();
+/* Select a product and fill in the order form */
 
-    if (!/sialkot/i.test(city)) {
-        messageElement.textContent =
-            "Delivery is currently available only within Sialkot city limits. Please contact us through Instagram to ask about an outside-city order.";
-        document.getElementById("outside-city").scrollIntoView?.({ behavior: "smooth" });
-        return;
+function chooseProduct(categoryName, productName) {
+    document.getElementById("productCategory").value = categoryName;
+    document.getElementById("productDetails").value = productName;
+
+    document.getElementById("order").scrollIntoView({
+        behavior: "smooth"
+    });
+
+    setTimeout(function() {
+        document.getElementById("customerName").focus({
+            preventScroll: true
+        });
+    }, 500);
+}
+
+/* Show order messages */
+
+function showMessage(message) {
+    document.getElementById("formMessage").textContent = message;
+}
+
+/* Prepare order details */
+
+function createOrderMessage() {
+    const form = document.getElementById("orderForm");
+
+    if (!form.reportValidity()) return null;
+
+    const data = new FormData(form);
+    const city = String(data.get("city") || "").trim();
+    const method = String(data.get("deliveryMethod") || "");
+    const address = String(data.get("address") || "").trim();
+
+    if (method === "Delivery within Sialkot" &&
+        !/sialkot/i.test(city)) {
+        showMessage(
+            "For delivery within Sialkot, enter Sialkot as your city. For other locations, select Outside Sialkot - Enquiry."
+        );
+        return null;
     }
 
-    if (!address) {
-        messageElement.textContent = "Please enter your complete delivery address.";
-        return;
+    if (method === "Delivery within Sialkot" && !address) {
+        showMessage("Please enter your complete delivery address.");
+        document.getElementById("address").focus();
+        return null;
     }
 
-    if (WHATSAPP_NUMBER === "923XXXXXXXXX" || !/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
-        messageElement.textContent =
-            "The order form is ready, but the WhatsApp number has not been added to the website code yet. Replace 923XXXXXXXXX with the real WhatsApp number.";
-        return;
-    }
-
-    const form = new FormData(this);
-
-    const message = [
-        "M. Yousaf Cloth House — Order Enquiry",
+    return [
+        "M. Yousaf Cloth House - Order Enquiry",
         "",
-        "Name: " + form.get("customerName"),
-        "Phone: " + form.get("customerPhone"),
+        "Name: " + data.get("customerName"),
+        "Phone: " + data.get("customerPhone"),
         "City: " + city,
-        "Category: " + form.get("productCategory"),
-        "Product / Design: " + form.get("productDetails"),
-        "Delivery Address: " + address,
-        "Additional Notes: " + (form.get("notes") || "None"),
+        "Category: " + data.get("productCategory"),
+        "Product / Design: " + data.get("productDetails"),
+        "Quantity: " + data.get("quantity"),
+        "Delivery Method: " + method,
+        "Address: " + (address || "Not provided"),
+        "Additional Notes: " + (data.get("notes") || "None"),
         "",
-        "Please confirm product availability, final price, delivery charges and payment details."
+        "Please confirm product availability, price and delivery charges.",
+        "I will wait for confirmation before making payment."
     ].join("\n");
+}
 
-    const whatsappURL =
-        "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(message);
+/* Copy order and open Instagram */
 
-    window.open(whatsappURL, "_blank", "noopener,noreferrer");
+document.getElementById("instagramButton").addEventListener(
+    "click",
+    async function() {
+        const message = createOrderMessage();
+        if (!message) return;
 
-    messageElement.textContent =
-        "Your order message has been prepared. Please check WhatsApp and send the message to confirm your enquiry.";
-});
+        const instagramWindow = window.open(INSTAGRAM_DM, "_blank");
 
-/* Product image viewer */
-const productImages = Array.from(document.querySelectorAll(".product-card img"));
+        try {
+            if (navigator.clipboard && window.isSecureContext) {
+                await navigator.clipboard.writeText(message);
+            } else {
+                const temporary = document.createElement("textarea");
+                temporary.value = message;
+                temporary.setAttribute("readonly", "");
+                temporary.style.position = "fixed";
+                temporary.style.opacity = "0";
+                document.body.appendChild(temporary);
+                temporary.select();
+
+                const copied = document.execCommand("copy");
+                temporary.remove();
+
+                if (!copied) throw new Error("Copy failed");
+            }
+
+            showMessage(
+                "Order message copied! Open Instagram, paste it into the message box and tap Send."
+            );
+        } catch (error) {
+            showMessage(
+                "Automatic copying was blocked. Copy the order message below and paste it into Instagram."
+            );
+
+            let output = document.getElementById("manualMessage");
+
+            if (!output) {
+                output = document.createElement("textarea");
+                output.id = "manualMessage";
+                output.readOnly = true;
+                output.setAttribute("aria-label", "Your order message");
+                output.style.width = "100%";
+                output.style.minHeight = "220px";
+                output.style.marginTop = "12px";
+                output.style.padding = "12px";
+                document.getElementById("formMessage").after(output);
+            }
+
+            output.value = message;
+            output.focus();
+            output.select();
+        }
+    }
+);
+
+/* WhatsApp ordering */
+
+document.getElementById("whatsappButton").addEventListener(
+    "click",
+    function() {
+        const message = createOrderMessage();
+        if (!message) return;
+
+        if (WHATSAPP_NUMBER === "923XXXXXXXXX" ||
+            !/^\d{10,15}$/.test(WHATSAPP_NUMBER)) {
+            showMessage(
+                "WhatsApp ordering is not activated yet. Use Instagram, or add your real WhatsApp number in the code."
+            );
+            return;
+        }
+
+        const whatsappURL =
+            "https://wa.me/" + WHATSAPP_NUMBER +
+            "?text=" + encodeURIComponent(message);
+
+        window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
+        showMessage(
+            "WhatsApp is opening with your prepared order. Review it and tap Send."
+        );
+    }
+);
+
+/* Full-screen picture viewer */
+
 let currentImageIndex = 0;
+let productPictures = [];
 
-function openViewer(imageElement) {
-    currentImageIndex = productImages.indexOf(imageElement);
+function refreshProductPictures() {
+    productPictures = Array.from(
+        document.querySelectorAll(".product-picture")
+    );
+}
+
+function openViewer(pictureButton) {
+    refreshProductPictures();
+
+    currentImageIndex = productPictures.indexOf(pictureButton);
+
+    if (currentImageIndex < 0) return;
+
     showCurrentImage();
 
-    const viewer = document.getElementById("imageViewer");
-    viewer.classList.add("open");
+    document.getElementById("imageViewer").classList.add("open");
     document.body.style.overflow = "hidden";
 }
 
 function showCurrentImage() {
-    if (!productImages.length) return;
+    if (!productPictures.length) return;
 
-    if (currentImageIndex < 0) {
-        currentImageIndex = productImages.length - 1;
-    }
+    currentImageIndex =
+        (currentImageIndex + productPictures.length) %
+        productPictures.length;
 
-    if (currentImageIndex >= productImages.length) {
-        currentImageIndex = 0;
-    }
+    const button = productPictures[currentImageIndex];
+    const image = button.querySelector("img");
 
-    const source = productImages[currentImageIndex];
-    const viewerImage = document.getElementById("viewerImage");
+    document.getElementById("viewerImage").src = image.src;
+    document.getElementById("viewerImage").alt = image.alt;
 
-    viewerImage.src = source.src;
-    viewerImage.alt = source.alt;
+    document.getElementById("viewerCaption").textContent =
+        image.alt + " • " +
+        (currentImageIndex + 1) + " of " +
+        productPictures.length;
 }
 
 function changeImage(direction) {
@@ -1186,11 +1591,12 @@ function closeViewer() {
     document.body.style.overflow = "";
 }
 
-document.getElementById("imageViewer").addEventListener("click", function(event) {
-    if (event.target === this) {
-        closeViewer();
+document.getElementById("imageViewer").addEventListener(
+    "click",
+    function(event) {
+        if (event.target === this) closeViewer();
     }
-});
+);
 
 document.addEventListener("keydown", function(event) {
     const viewer = document.getElementById("imageViewer");
@@ -1201,6 +1607,31 @@ document.addEventListener("keydown", function(event) {
     if (event.key === "ArrowLeft") changeImage(-1);
     if (event.key === "ArrowRight") changeImage(1);
 });
+
+/* Swipe between pictures on mobile */
+
+let touchStartX = 0;
+
+document.getElementById("imageViewer").addEventListener(
+    "touchstart",
+    function(event) {
+        touchStartX = event.changedTouches[0].screenX;
+    },
+    { passive: true }
+);
+
+document.getElementById("imageViewer").addEventListener(
+    "touchend",
+    function(event) {
+        const touchEndX = event.changedTouches[0].screenX;
+        const distance = touchEndX - touchStartX;
+
+        if (Math.abs(distance) < 60) return;
+
+        changeImage(distance < 0 ? 1 : -1);
+    },
+    { passive: true }
+);
 </script>
 
 </body>
