@@ -30,7 +30,7 @@ body::before {
     content:"";
     position:fixed;
     inset:0;
-    background:url("logo.png") center / 260px auto repeat;
+    background:url("images/logo.png") center / 260px auto repeat;
     opacity:.035;
     pointer-events:none;
     z-index:-1;
@@ -149,7 +149,12 @@ header {
     border:1px solid var(--border);
     background:rgba(255,253,249,.8);
 }
-.hero-logo img { max-width:330px; max-height:290px; width:100%; object-fit:contain; }
+.hero-logo img {
+    max-width:330px;
+    max-height:290px;
+    width:100%;
+    object-fit:contain;
+}
 
 .btn {
     display:inline-flex;
@@ -183,13 +188,34 @@ header {
     transition:.2s;
 }
 .category-card:hover { background:var(--black); color:var(--beige); }
-.category-card h3 { font-family:Georgia,serif; font-size:19px; font-weight:normal; }
-.category-card p { font-size:12px; margin-top:5px; color:var(--muted); }
+.category-card h3 {
+    font-family:Georgia,serif;
+    font-size:19px;
+    font-weight:normal;
+}
+.category-card p {
+    font-size:12px;
+    margin-top:5px;
+    color:var(--muted);
+}
 .category-card:hover p { color:var(--beige); }
 
-.product-section { padding-top:38px; padding-bottom:40px; border-top:1px solid rgba(183,154,107,.3); }
-.product-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
-.product-card { min-width:0; background:rgba(255,253,249,.96); border:1px solid var(--border); overflow:hidden; }
+.product-section {
+    padding-top:38px;
+    padding-bottom:40px;
+    border-top:1px solid rgba(183,154,107,.3);
+}
+.product-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:20px;
+}
+.product-card {
+    min-width:0;
+    background:rgba(255,253,249,.96);
+    border:1px solid var(--border);
+    overflow:hidden;
+}
 .product-picture {
     width:100%;
     height:310px;
@@ -210,14 +236,33 @@ header {
 }
 .product-picture:hover img { transform:scale(1.02); }
 .product-info { padding:16px; }
-.product-info h4 { font-family:Georgia,serif; font-size:19px; color:var(--black); margin-bottom:5px; }
+.product-info h4 {
+    font-family:Georgia,serif;
+    font-size:19px;
+    color:var(--black);
+    margin-bottom:5px;
+}
 .product-info p { color:var(--muted); font-size:13px; }
-.product-price { font-weight:bold; color:#92744b!important; margin:8px 0 13px; }
+.product-price {
+    font-weight:bold;
+    color:#92744b!important;
+    margin:8px 0 13px;
+}
 .order-product { width:100%; }
 
 .bin-saeed-section { background:rgba(232,220,200,.2); }
-.bin-saeed-list { display:flex; flex-direction:column; gap:24px; max-width:850px; margin:auto; }
-.bin-dress { background:var(--white); border:1px solid var(--border); overflow:hidden; }
+.bin-saeed-list {
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    max-width:850px;
+    margin:auto;
+}
+.bin-dress {
+    background:var(--white);
+    border:1px solid var(--border);
+    overflow:hidden;
+}
 .bin-dress .product-picture {
     width:100%;
     height:auto;
@@ -226,13 +271,27 @@ header {
     aspect-ratio:4/5;
     background:#eee6d9;
 }
-.bin-dress .product-picture img { object-fit:contain; width:100%; height:100%; }
+.bin-dress .product-picture img {
+    object-fit:contain;
+    width:100%;
+    height:100%;
+}
 .bin-dress .product-info { padding:20px; }
 .bin-dress .product-info h4 { font-size:22px; }
 .bin-dress .order-product { max-width:300px; }
 
-.policy-strip { background:var(--black); color:var(--beige); padding:30px 20px; text-align:center; }
-.policy-strip h2 { font-family:Georgia,serif; font-weight:normal; font-size:27px; margin-bottom:12px; }
+.policy-strip {
+    background:var(--black);
+    color:var(--beige);
+    padding:30px 20px;
+    text-align:center;
+}
+.policy-strip h2 {
+    font-family:Georgia,serif;
+    font-weight:normal;
+    font-size:27px;
+    margin-bottom:12px;
+}
 .policy-items {
     max-width:1000px;
     margin:auto;
@@ -244,10 +303,29 @@ header {
 }
 
 .order-area { max-width:850px; margin:auto; padding:45px 22px 55px; }
-.order-panel { background:rgba(255,253,249,.97); border:1px solid var(--border); padding:clamp(18px,4vw,35px); }
-.order-panel h2 { font-family:Georgia,serif; font-size:31px; font-weight:normal; text-align:center; margin-bottom:8px; }
-.order-intro { text-align:center; color:var(--muted); font-size:14px; margin-bottom:25px; }
-.form-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:17px; }
+.order-panel {
+    background:rgba(255,253,249,.97);
+    border:1px solid var(--border);
+    padding:clamp(18px,4vw,35px);
+}
+.order-panel h2 {
+    font-family:Georgia,serif;
+    font-size:31px;
+    font-weight:normal;
+    text-align:center;
+    margin-bottom:8px;
+}
+.order-intro {
+    text-align:center;
+    color:var(--muted);
+    font-size:14px;
+    margin-bottom:25px;
+}
+.form-grid {
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:17px;
+}
 .form-group { display:flex; flex-direction:column; gap:6px; }
 .form-group.full { grid-column:1/-1; }
 .form-group label { font-size:13px; font-weight:bold; }
@@ -264,7 +342,12 @@ header {
     outline:2px solid var(--gold);
     outline-offset:1px;
 }
-.order-actions { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:22px; }
+.order-actions {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:22px;
+}
 .order-actions .btn { width:100%; min-height:48px; }
 .form-message {
     margin-top:15px;
@@ -276,7 +359,12 @@ header {
     overflow-wrap:anywhere;
 }
 .form-message:empty { display:none; }
-.order-note { color:var(--muted); font-size:12px; margin-top:14px; text-align:center; }
+.order-note {
+    color:var(--muted);
+    font-size:12px;
+    margin-top:14px;
+    text-align:center;
+}
 .payment-notice {
     margin-top:16px;
     padding:15px;
@@ -284,15 +372,43 @@ header {
     border:1px solid var(--border);
     font-size:13px;
 }
-.outside-city { margin-top:22px; padding:18px; border:1px solid var(--border); text-align:center; background:rgba(232,220,200,.5); }
+.outside-city {
+    margin-top:22px;
+    padding:18px;
+    border:1px solid var(--border);
+    text-align:center;
+    background:rgba(232,220,200,.5);
+}
 .outside-city p { font-size:14px; margin-bottom:12px; }
-.contact-links { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; }
+.contact-links {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:10px;
+}
 
 .contact-section { background:#eee5d7; text-align:center; padding:38px 20px; }
-.contact-section h2 { font-family:Georgia,serif; font-size:29px; font-weight:normal; margin-bottom:8px; }
+.contact-section h2 {
+    font-family:Georgia,serif;
+    font-size:29px;
+    font-weight:normal;
+    margin-bottom:8px;
+}
 .contact-section p { font-size:14px; color:var(--muted); margin-bottom:18px; }
-footer { background:var(--black); color:var(--beige); text-align:center; padding:25px 18px 85px; font-size:12px; }
-.footer-links { display:flex; justify-content:center; flex-wrap:wrap; gap:17px; margin-bottom:15px; }
+footer {
+    background:var(--black);
+    color:var(--beige);
+    text-align:center;
+    padding:25px 18px 85px;
+    font-size:12px;
+}
+.footer-links {
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:17px;
+    margin-bottom:15px;
+}
 
 .corner-logo {
     position:fixed;
@@ -319,8 +435,20 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
     padding:55px 12px;
 }
 .image-viewer.open { display:flex; }
-.viewer-content { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
-.image-viewer img { max-width:100%; max-height:100%; width:auto; height:auto; object-fit:contain; }
+.viewer-content {
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.image-viewer img {
+    max-width:100%;
+    max-height:100%;
+    width:auto;
+    height:auto;
+    object-fit:contain;
+}
 .viewer-close,.viewer-prev,.viewer-next {
     position:absolute;
     z-index:2;
@@ -333,7 +461,15 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
 .viewer-close { top:12px; right:12px; }
 .viewer-prev { left:10px; top:50%; }
 .viewer-next { right:10px; top:50%; }
-.viewer-caption { position:absolute; bottom:12px; left:60px; right:60px; color:white; text-align:center; font-size:13px; }
+.viewer-caption {
+    position:absolute;
+    bottom:12px;
+    left:60px;
+    right:60px;
+    color:white;
+    text-align:center;
+    font-size:13px;
+}
 
 @media(max-width:760px) {
     .navbar { flex-wrap:wrap; justify-content:center; padding:10px 14px; gap:12px; }
@@ -377,12 +513,13 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
 <header>
     <nav class="navbar">
         <a href="#home" class="brand" aria-label="M. Yousaf Cloth House home">
-            <img src="logo.png" alt="M. Yousaf Cloth House logo">
+            <img src="images/logo.png" alt="M. Yousaf Cloth House logo">
             <div class="brand-text">
                 <h1>M. Yousaf Cloth House</h1>
-                <p>STYLE • QUALITY • ELEGANCE</p>
+                <p>SINCE 1990</p>
             </div>
         </a>
+
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#categories">Categories</a>
@@ -397,15 +534,17 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
 <section class="hero" id="home">
     <div class="hero-copy">
         <p class="eyebrow">Welcome to our collection</p>
-        <h2>Everyday Style, Timeless Elegance.</h2>
+        <h2>M. Yousaf Cloth House</h2>
         <p>Discover suits, dupattas and everyday essentials at M. Yousaf Cloth House. Browse our designs, select your favourite product and send us an order enquiry.</p>
+
         <div class="hero-buttons">
             <a class="btn" href="#categories">Explore Collection</a>
             <a class="btn btn-outline" href="#order">How to Order</a>
         </div>
     </div>
+
     <div class="hero-logo">
-        <img src="logo.png" alt="M. Yousaf Cloth House full logo">
+        <img src="images/logo.png" alt="M. Yousaf Cloth House full logo">
     </div>
 </section>
 
@@ -415,6 +554,7 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
         <h2>Shop by Category</h2>
         <p>Tap a category to explore its designs.</p>
     </div>
+
     <div class="category-links">
         <a class="category-card" href="#napkins"><h3>Napkins</h3><p>Explore collection →</p></a>
         <a class="category-card" href="#printed-suits"><h3>Printed Suits</h3><p>Explore collection →</p></a>
@@ -426,57 +566,133 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
 </section>
 
 <section class="section product-section" id="napkins">
-    <div class="section-heading"><p class="eyebrow">Category 01</p><h2>Napkins</h2></div>
+    <div class="section-heading">
+        <p class="eyebrow">Category 01</p>
+        <h2>Napkins</h2>
+    </div>
+
     <div class="product-grid">
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Napkin Design 1"><img src="napkin1.jpg" alt="Napkin design 1" loading="lazy"></button>
-            <div class="product-info"><h4>Napkin Design 1</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Napkins','Napkin Design 1')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Napkin Design 1">
+                <img src="images/napkin1.jpg" alt="Napkin design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Napkins','Napkin Design 1')">Select This Product</button>
+            </div>
         </article>
+
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Napkin Design 2"><img src="napkin2.jpg" alt="Napkin design 2" loading="lazy"></button>
-            <div class="product-info"><h4>Napkin Design 2</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Napkins','Napkin Design 2')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Napkin Design 2">
+                <img src="images/napkin2.jpg" alt="Napkin design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Napkin Design 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Napkins','Napkin Design 2')">Select This Product</button>
+            </div>
         </article>
     </div>
 </section>
 
 <section class="section product-section" id="printed-suits">
-    <div class="section-heading"><p class="eyebrow">Category 02</p><h2>Printed Suits</h2></div>
+    <div class="section-heading">
+        <p class="eyebrow">Category 02</p>
+        <h2>Printed Suits</h2>
+    </div>
+
     <div class="product-grid">
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Printed Suit 1"><img src="printed-suit1.jpg" alt="Printed suit design 1" loading="lazy"></button>
-            <div class="product-info"><h4>Printed Suit 1</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Printed Suits','Printed Suit 1')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Printed Suit 1">
+                <img src="images/printed-suit1.jpg" alt="Printed suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Printed Suits','Printed Suit 1')">Select This Product</button>
+            </div>
         </article>
+
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Printed Suit 2"><img src="printed-suit2.jpg" alt="Printed suit design 2" loading="lazy"></button>
-            <div class="product-info"><h4>Printed Suit 2</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Printed Suits','Printed Suit 2')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Printed Suit 2">
+                <img src="images/printed-suit2.jpg" alt="Printed suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Printed Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Printed Suits','Printed Suit 2')">Select This Product</button>
+            </div>
         </article>
     </div>
 </section>
 
 <section class="section product-section" id="casual-suits">
-    <div class="section-heading"><p class="eyebrow">Category 03</p><h2>Casual Suits</h2></div>
+    <div class="section-heading">
+        <p class="eyebrow">Category 03</p>
+        <h2>Casual Suits</h2>
+    </div>
+
     <div class="product-grid">
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Casual Suit 1"><img src="casual-suit1.jpg" alt="Casual suit design 1" loading="lazy"></button>
-            <div class="product-info"><h4>Casual Suit 1</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Casual Suits','Casual Suit 1')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Casual Suit 1">
+                <img src="images/casual-suit1.jpg" alt="Casual suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Casual Suits','Casual Suit 1')">Select This Product</button>
+            </div>
         </article>
+
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Casual Suit 2"><img src="casual-suit2.jpg" alt="Casual suit design 2" loading="lazy"></button>
-            <div class="product-info"><h4>Casual Suit 2</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Casual Suits','Casual Suit 2')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Casual Suit 2">
+                <img src="images/casual-suit2.jpg" alt="Casual suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Casual Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Casual Suits','Casual Suit 2')">Select This Product</button>
+            </div>
         </article>
     </div>
 </section>
 
 <section class="section product-section" id="embroidered-suits">
-    <div class="section-heading"><p class="eyebrow">Category 04</p><h2>Embroidered Suits</h2></div>
+    <div class="section-heading">
+        <p class="eyebrow">Category 04</p>
+        <h2>Embroidered Suits</h2>
+    </div>
+
     <div class="product-grid">
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Embroidered Suit 1"><img src="embroidered-suit1.jpg" alt="Embroidered suit design 1" loading="lazy"></button>
-            <div class="product-info"><h4>Embroidered Suit 1</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Embroidered Suits','Embroidered Suit 1')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Embroidered Suit 1">
+                <img src="images/embroidered-suit1.jpg" alt="Embroidered suit design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Embroidered Suits','Embroidered Suit 1')">Select This Product</button>
+            </div>
         </article>
+
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Embroidered Suit 2"><img src="embroidered-suit2.jpg" alt="Embroidered suit design 2" loading="lazy"></button>
-            <div class="product-info"><h4>Embroidered Suit 2</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Embroidered Suits','Embroidered Suit 2')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Embroidered Suit 2">
+                <img src="images/embroidered-suit2.jpg" alt="Embroidered suit design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Embroidered Suit 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Embroidered Suits','Embroidered Suit 2')">Select This Product</button>
+            </div>
         </article>
     </div>
 </section>
@@ -487,23 +703,42 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
         <h2>Bin Saeed Suits</h2>
         <p>Explore each design individually. Tap a picture to view it full-screen.</p>
     </div>
+
     <div class="bin-saeed-list" id="binSaeedProducts"></div>
 </section>
 
 <section class="section product-section" id="chiffon-dupattas">
-    <div class="section-heading"><p class="eyebrow">Category 06</p><h2>Chiffon Dupattas</h2></div>
+    <div class="section-heading">
+        <p class="eyebrow">Category 06</p>
+        <h2>Chiffon Dupattas</h2>
+    </div>
+
     <div class="product-grid">
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Chiffon Dupatta 1"><img src="chiffon-dupatta1.jpg" alt="Chiffon dupatta design 1" loading="lazy"></button>
-            <div class="product-info"><h4>Chiffon Dupatta 1</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 1')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Chiffon Dupatta 1">
+                <img src="images/chiffon-dupatta1.jpg" alt="Chiffon dupatta design 1" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 1</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 1')">Select This Product</button>
+            </div>
         </article>
+
         <article class="product-card">
-            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Chiffon Dupatta 2"><img src="chiffon-dupatta2.jpg" alt="Chiffon dupatta design 2" loading="lazy"></button>
-            <div class="product-info"><h4>Chiffon Dupatta 2</h4><p>Contact us for details and availability.</p><p class="product-price">Price: To be confirmed</p><button class="btn order-product" type="button" onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 2')">Select This Product</button></div>
+            <button class="product-picture" type="button" onclick="openViewer(this)" aria-label="View Chiffon Dupatta 2">
+                <img src="images/chiffon-dupatta2.jpg" alt="Chiffon dupatta design 2" loading="lazy">
+            </button>
+            <div class="product-info">
+                <h4>Chiffon Dupatta 2</h4>
+                <p>Contact us for details and availability.</p>
+                <p class="product-price">Price: To be confirmed</p>
+                <button class="btn order-product" type="button" onclick="chooseProduct('Chiffon Dupattas','Chiffon Dupatta 2')">Select This Product</button>
+            </div>
         </article>
     </div>
 </section>
-
 <section class="policy-strip">
     <h2>Ordering & Delivery</h2>
     <div class="policy-items">
@@ -526,14 +761,17 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
                     <label for="customerName">Full Name *</label>
                     <input id="customerName" name="customerName" required autocomplete="name" placeholder="Enter your name">
                 </div>
+
                 <div class="form-group">
                     <label for="customerPhone">Phone Number *</label>
                     <input id="customerPhone" name="customerPhone" type="tel" required autocomplete="tel" placeholder="03XX XXXXXXX">
                 </div>
+
                 <div class="form-group">
                     <label for="city">City *</label>
                     <input id="city" name="city" required placeholder="Enter your city">
                 </div>
+
                 <div class="form-group">
                     <label for="productCategory">Product Category *</label>
                     <select id="productCategory" name="productCategory" required>
@@ -546,14 +784,17 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
                         <option>Chiffon Dupattas</option>
                     </select>
                 </div>
+
                 <div class="form-group full">
                     <label for="productDetails">Product / Design *</label>
                     <input id="productDetails" name="productDetails" required placeholder="Select a product or type its name">
                 </div>
+
                 <div class="form-group">
                     <label for="quantity">Quantity *</label>
                     <input id="quantity" name="quantity" type="number" min="1" step="1" value="1" required>
                 </div>
+
                 <div class="form-group">
                     <label for="deliveryMethod">Delivery Method *</label>
                     <select id="deliveryMethod" name="deliveryMethod" required>
@@ -563,10 +804,12 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
                         <option>Outside Sialkot - Enquiry</option>
                     </select>
                 </div>
+
                 <div class="form-group full">
                     <label for="address">Delivery Address</label>
                     <textarea id="address" name="address" placeholder="Enter your address if delivery is needed"></textarea>
                 </div>
+
                 <div class="form-group full">
                     <label for="notes">Additional Notes (Optional)</label>
                     <textarea id="notes" name="notes" placeholder="Ask about price, fabric or customisation"></textarea>
@@ -584,6 +827,7 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
                 <button class="btn" type="button" id="instagramButton">Copy Order & Open Instagram</button>
                 <button class="btn btn-outline" type="button" id="whatsappButton">Continue on WhatsApp</button>
             </div>
+
             <p class="form-message" id="formMessage" role="status" aria-live="polite"></p>
         </form>
 
@@ -620,13 +864,15 @@ footer { background:var(--black); color:var(--beige); text-align:center; padding
 </footer>
 
 <a class="corner-logo" href="#home" aria-label="Back to top">
-    <img src="logo.png" alt="M. Yousaf Cloth House">
+    <img src="images/logo.png" alt="M. Yousaf Cloth House">
 </a>
 
 <div class="image-viewer" id="imageViewer" role="dialog" aria-modal="true" aria-label="Product image viewer">
     <button class="viewer-close" type="button" onclick="closeViewer()" aria-label="Close image">✕</button>
     <button class="viewer-prev" type="button" onclick="changeImage(-1)" aria-label="Previous image">‹</button>
-    <div class="viewer-content"><img id="viewerImage" src="" alt="Expanded product image"></div>
+    <div class="viewer-content">
+        <img id="viewerImage" src="" alt="Expanded product image">
+    </div>
     <button class="viewer-next" type="button" onclick="changeImage(1)" aria-label="Next image">›</button>
     <p class="viewer-caption" id="viewerCaption"></p>
 </div>
@@ -688,7 +934,7 @@ for (let i = 1; i <= 120; i++) {
     pictureButton.setAttribute("aria-label", "View Bin Saeed Dress " + i);
 
     const img = document.createElement("img");
-    img.src = "bin-saeed-suit" + i + ".jpg";
+    img.src = "images/bin-saeed-suit" + i + ".jpg";
     img.alt = "Bin Saeed Dress " + i;
     img.loading = i <= 2 ? "eager" : "lazy";
 
@@ -728,6 +974,7 @@ for (let i = 1; i <= 120; i++) {
     card.append(pictureButton, info);
     binSaeedFragment.appendChild(card);
 }
+
 binSaeedContainer.appendChild(binSaeedFragment);
 
 function chooseProduct(categoryName, productName) {
@@ -753,6 +1000,7 @@ function showMessage(message) {
 
 function createOrderMessage() {
     const form = document.getElementById("orderForm");
+
     if (!form.reportValidity()) return null;
 
     const data = new FormData(form);
@@ -767,6 +1015,7 @@ function createOrderMessage() {
     }
 
     const binMatch = productName.match(/^Bin Saeed Dress (\d+)$/);
+
     if (binMatch && binSaeedAvailability[Number(binMatch[1])] === false) {
         showMessage("This Bin Saeed design is currently unavailable. Please choose another design.");
         return null;
@@ -817,14 +1066,20 @@ document.getElementById("instagramButton").addEventListener("click", async funct
             temporary.style.opacity = "0";
             document.body.appendChild(temporary);
             temporary.select();
+
             const copied = document.execCommand("copy");
             temporary.remove();
+
             if (!copied) throw new Error("Copy failed");
         }
+
         showMessage("Order message copied. Paste it into Instagram and tap Send.");
+
     } catch (error) {
         showMessage("Copying was blocked. Your order message is shown below so you can copy it manually.");
+
         let output = document.getElementById("manualMessage");
+
         if (!output) {
             output = document.createElement("textarea");
             output.id = "manualMessage";
@@ -833,8 +1088,10 @@ document.getElementById("instagramButton").addEventListener("click", async funct
             output.style.minHeight = "220px";
             output.style.marginTop = "12px";
             output.style.padding = "12px";
+
             document.getElementById("formMessage").after(output);
         }
+
         output.value = message;
         output.focus();
         output.select();
@@ -850,6 +1107,7 @@ document.getElementById("whatsappButton").addEventListener("click", function() {
         "?text=" + encodeURIComponent(message);
 
     window.open(whatsappURL, "_blank", "noopener,noreferrer");
+
     showMessage("WhatsApp is opening with your prepared order. Review the message and tap Send.");
 });
 
@@ -864,10 +1122,13 @@ function refreshProductPictures() {
 
 function openViewer(pictureButton) {
     refreshProductPictures();
+
     currentImageIndex = productPictures.indexOf(pictureButton);
+
     if (currentImageIndex < 0) return;
 
     showCurrentImage();
+
     document.getElementById("imageViewer").classList.add("open");
     document.body.style.overflow = "hidden";
 }
@@ -883,6 +1144,7 @@ function showCurrentImage() {
 
     document.getElementById("viewerImage").src = image.src;
     document.getElementById("viewerImage").alt = image.alt;
+
     document.getElementById("viewerCaption").textContent =
         image.alt + " • " + (currentImageIndex + 1) +
         " of " + productPictures.length;
@@ -904,6 +1166,7 @@ document.getElementById("imageViewer").addEventListener("click", function(event)
 
 document.addEventListener("keydown", function(event) {
     if (!document.getElementById("imageViewer").classList.contains("open")) return;
+
     if (event.key === "Escape") closeViewer();
     if (event.key === "ArrowLeft") changeImage(-1);
     if (event.key === "ArrowRight") changeImage(1);
@@ -918,7 +1181,9 @@ document.getElementById("imageViewer").addEventListener("touchstart", function(e
 document.getElementById("imageViewer").addEventListener("touchend", function(event) {
     const touchEndX = event.changedTouches[0].screenX;
     const distance = touchEndX - touchStartX;
+
     if (Math.abs(distance) < 60) return;
+
     changeImage(distance < 0 ? 1 : -1);
 }, {passive:true});
 </script>
